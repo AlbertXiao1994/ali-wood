@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title></title>
 	<meta charset="utf-8">
@@ -12,19 +11,18 @@
 	{% block style %}
 	{% endblock style %}
   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 	<script type="text/javascript" src="{% static 'js/common.js' %}"></script>
 	{% block js %}
 	{% endblock js %}
 </head>
-
 <body>
 	<!-- 导航栏-->
 	{% block header %}
 	<nav class="navbar">
 		<div class="navbar-brand">
 			<a href="/">
-				<img src="{% static 'image/logo.png' %}">
+				<img src="{% static 'image/brand.png' %}">
 			</a>
 		</div>
 		<div class="navbar-nav">
@@ -38,23 +36,11 @@
 			<div class="nav-link"><a href="/">历史剪辑</a></div>
 		</div>
 	</nav>
-
 	{% endblock header %}
+
 	{% block contents %}
 	{% endblock contents %}
 	{% block foot %}
-	<br><br><br><br><br><br><br><br>
-
-	<!-- 脚注 -->
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<p class="footnote">© 2018 by IDEA LAB</p>
-			</div>
-		</div>
-	</div>
-	<br><br><br><br>
-
 	{% endblock %}
 </body>
 

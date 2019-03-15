@@ -17,3 +17,91 @@
   font-size: 0.35rem;
   color: #5D5D5D;
 }
+
+.video-tools {
+  margin-bottom: 0.44rem;
+}
+
+.video-tools .tool-content {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 8.37rem;
+  margin: 0 auto;
+  padding-top: 0.93rem;
+}
+
+.video-tools .tool-content h2 {
+  margin-top: 0;
+  margin-bottom: 0.05rem;
+  font-size: 0.35rem;
+  color: #FACD52;
+}
+
+.video-tools .tool-content .tool-underline {
+  height: 2px;
+  background: #FACD52;
+}
+
+.video-tools .tool-content .underline-long {
+  width: 3.5rem;
+}
+
+.video-tools .tool-content .underline-short {
+  width: 2.1rem;
+}
+
+.video-tools .tool-content .tool-describe {
+  margin-top: 0.5rem;
+  font-size: 0.18rem;
+}
+
+.video-tools .tool-content .pic-analyse img {
+  width: 8.33rem;
+}
+
+.video-tools .tool-content .pic-edit {
+  margin-top: 0.56rem;
+}
+
+.video-tools .tool-content .pic-edit img {
+  width: 8.33rem;
+}
+
+.video-tools .tool-content .pic-rank {
+  margin-top: 0.56rem;
+}
+
+.video-tools .tool-content .pic-rank img {
+  width: 3.22rem;
+}
+
+footer {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  height: 2.54rem;
+  background: #FACD52;
+}
+
+footer .footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.8rem;
+  height: 1.1rem;
+  margin-top: 0.5rem;
+  background: #fff;
+}
+
+footer .footer-logo img {
+  width: 3.41rem;
+  height: 0.63rem;
+}
+
+footer .foot-note {
+  margin-top: 0.3rem;
+  color: #fff;
+  font-size: 0.13rem;
+}
