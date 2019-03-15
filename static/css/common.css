@@ -65,6 +65,10 @@ body {
   background: #5D5D5D;
 }
 
+.nav-link .active {
+  color: #FACD52;
+}
+
 .navbar-button {
   position: absolute;
   right: 0.6rem;
