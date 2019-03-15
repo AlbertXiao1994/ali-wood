@@ -1,53 +1,71 @@
 /*背景颜色*/
 body {
-    font-family: "Microsoft Yahei";
-    background-color: #333232;
+  font-family: 'PingFang SC', 'Microsoft Yahei';
 }
 
-/*整个容器*/
-.container {
-    padding-right: 5px;
-    padding-left: 5px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 1000px;
+.navbar {
+  width: 100%;
+  height: 1rem;
+  border-radius: 0;
+  margin-bottom: 0;
 }
 
 .navbar-brand {
-    float: left;
-    height: 50px;
-    padding: 3px 100px;
-    font-size: 18px;
-    line-height: 20px;
+  margin-left: 0.83rem;
+  margin-top: 0.28rem;
+  padding: 0;
 }
 
-.navbar-inverse {
-    background-color: #fff;
-    border-color: #504f4f;
-    border-bottom-width: 5px;
-    padding-top: 20px;
-    height: 70px;
+.navbar-brand a {
+  display: inline-block;
 }
 
-.navbar-inverse .navbar-nav > li > a {
-    color: #000;
-    margin-right: 60px;
-    padding-right: 5px;
+.navbar-brand img {
+  width: 2.84rem;
+  height: 0.54rem;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover {
-    color: blue;
+.navbar-nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center; 
 }
 
-.navbar-inverse .navbar-toggle {
-    border-color: #333;
+.nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
 }
 
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: #fff;
+.navbar-nav .nav-link-home {
+  padding-left: 0.68rem;
+  padding-right: 0.68rem;
 }
 
-/*脚注样式*/
-.footnote {
-    color: #6B6B6B;
+.navbar-nav .nav-link-data {
+  padding-left: 0.68rem;
+}
+
+.nav-link a {
+  font-size: 0.25rem;
+  color: #5D5D5D;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link a:hover {
+  color: #FACD52;
+}
+
+.navbar .nav-border {
+  width: 2px;
+  height: 0.36rem;
+  background: #5D5D5D;
+}
+
+.navbar-button {
+  position: absolute;
+  right: 0.6rem;
 }

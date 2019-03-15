@@ -1,90 +1,16 @@
 {% extends 'aliwood/common.html' %}
 {% block style %}
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}" media="all">
-    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" media="all">
 {% endblock style %}
+
 {% block contents %}
-    <div class="container">
-        <h1 id="title" class="text-center">广告短视频数据库</h1>
+  <div class="content">
+    <div class="banner">
+      <img src="{% static 'image/banner.png' %}">
     </div>
-    <div class="container">
-        <h4 class="text-center" style="color: #E75A5A">[ COMMRERCIAL FILM ]</h4>
+    <div class="slogan">
+      <p>平台已收集了XXXX段视频数据，同时提供了视频分析、评价与剪辑工具</p>
     </div>
-    <div class="container">
-        <div col-lg-12></div>
-        <div class="col-lg-3 col-xs-3"></div>
-        <form>
-            <div class="input-group col-lg-6 col-md-6 col-sm-6">
-                <input type="text" name="video" class="form-control" placeholder="请输入要查询的视频类型"/>
-                <span class="input-group-btn">
-               <button type="submit" class="btn btn-info btn-search"><span
-                       class="glyphicon glyphicon-search"></span></button>
-       </span>
-            </div>
-        </form>
-        <div class="container" style="height: 20px;"></div>
-        <div class="col-lg-3 col-xs-3"></div>
-        <div class="col-lg-3"></div>
-        <div class="input-group" id="screen">
-            {% load static %}
-            <div class="container ">
-                <h4 class="title_video" id="title">视频载体：
-                    <a href=""> <span
-                            style="padding-left:35px; color: #f25c5c;">全部 <span
-                            style="font-size: 16px; color: #9B9B9B;">()</span></span>
-                    </a>
-                </h4>
-            </div>
-
-            <div class="container">
-                <h4 class="title_business">业务场景：
-                    <a href="">
-                    <span style="padding-left:35px; color: #f25c5c;">全部 <span
-                            style="font-size: 16px; color: #9B9B9B;">( )</span></span></a>
-                </h4>
-            </div>
-
-            <div class="container">
-                <h4 class="title_product">产品品类：
-                    <a href="">
-                    <span style="padding-left:35px; color: #f25c5c;">全部 <span
-                            style="font-size: 16px; color: #9B9B9B;">(  )</span></span> </a>
-                </h4>
-            </div>
-
-            <div class="container">
-                <h4 class="title_style" style="padding-left: 18px;padding-top: 10px;padding-bottom: 10px;color: #858484;">产品风格：
-                    <a href="">
-                    <span style="padding-left:35px; color: #f25c5c;">全部 <span
-                            style="font-size: 16px; color: #9B9B9B;">( )</span></span> </a>
-                </h4>
-            </div>
-        </div>
-
-        <div class="container" style="padding-top: 30px;">
-        </div>
-        <div class="col-md-12">
-            <div class="row">
-                <form method="post" enctype="multipart/form-data">
-                    <a href="">
-                        <div class="ssn">
-                            <div class="aat col-md-4 col-sm-2 col-xs-2 ">
-                                <input type="file" class="aas" id="dead">
-                                <div class="text_show">添加视频</div>
-                            </div>
-                        </div>
-                    </a>
-                </form>
-            </div>
-            <br>
-            <div class="container text-center">
-                <nav>
-                </nav>
-            </div>
-        </div>
-    </div>
+  </div>
 {% endblock contents %}
