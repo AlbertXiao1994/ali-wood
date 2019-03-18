@@ -83,6 +83,16 @@ body {
   right: 0.6rem;
 }
 
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  padding-top: 1rem;
+  background: #F7F7F5;
+}
+
 .sidebar {
   position: absolute;
   top: 0;
@@ -92,3 +102,4 @@ body {
   background: #FACD52;
   padding-top: 1rem;
 }
+

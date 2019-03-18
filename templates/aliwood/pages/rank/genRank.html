@@ -1,0 +1,21 @@
+{% extends 'aliwood/layout/base.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/rank.css' %}" media="all">
+{% endblock style %}
+
+{% block contents %}
+<div class="content">
+  <div class="upload-icon">
+    <img src="{% static 'image/upload.png' %}">
+  </div>
+  <div class="upload-describe">
+    <p>点击“+”</p>
+    <p>或拖拽文件到虚线框内</p>
+    <p>来上传自己的案例</p>
+  </div>
+  <div class="upload-btn">
+    <span>生成评价</span>
+  </div>
+</div>
+{% endblock contents %}

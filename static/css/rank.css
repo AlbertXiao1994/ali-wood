@@ -1,0 +1,35 @@
+.content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .upload-icon img {
+  width: 1.31rem;
+  cursor: pointer;
+}
+
+.content .upload-describe {
+  margin-top: 0.31rem;
+}
+
+.content .upload-describe p {
+  font-family: 'Source Sans Pro';
+  font-size: 0.17rem;
+  color: #707070;
+  line-height: 0.24rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.content .upload-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.87rem;
+  height: 0.46rem;
+  margin-top: 1.24rem;
+  background: #FACD52;
+  font-size: 0.18rem;
+  border-radius: 0.15rem;
+}

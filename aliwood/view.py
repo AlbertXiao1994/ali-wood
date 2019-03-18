@@ -18,7 +18,7 @@ def edit(request):
 def rank(request):
   context          = {}
   context['path'] = request.path
-  return render(request, 'aliwood/pages/rank.html', context)
+  return render(request, 'aliwood/pages/rank/genRank.html', context)
 
 def history(request):
   context          = {}
