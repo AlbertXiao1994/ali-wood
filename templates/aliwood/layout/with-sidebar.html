@@ -5,5 +5,8 @@
 {% endblock style %}
 
 {% block sidebar %}
-  <div class="sidebar">sidebar</div>
+  <div class="sidebar">
+    {% block sidebar-content %}
+    {% endblock sidebar-content %}
+  </div>
 {% endblock sidebar %}
