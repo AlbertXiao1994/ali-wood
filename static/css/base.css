@@ -1,6 +1,13 @@
 /*背景颜色*/
 body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
   font-family: 'PingFang SC', 'Microsoft Yahei';
+}
+
+.wrapper {
+  flex: 1;
 }
 
 .navbar {

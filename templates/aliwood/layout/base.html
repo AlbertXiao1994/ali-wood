@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
 	<meta charset="utf-8">
@@ -10,38 +11,26 @@
 	<link rel="stylesheet" type="text/css" href="{% static '/css/base.css' %}">
 	{% block style %}
 	{% endblock style %}
-  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 	<!-- <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 	<script type="text/javascript" src="{% static 'js/base.js' %}"></script>
 	{% block js %}
 	{% endblock js %}
 </head>
-<body>
-	<!-- 导航栏-->
-	{% block header %}
-	<nav class="navbar">
-		<div class="navbar-brand">
-			<a href="/">
-				<img src="{% static 'image/brand.png' %}">
-			</a>
-		</div>
-		<div class="navbar-nav">
-			<div class="nav-link nav-link-home"><a {% if path == '/' %}class="active"{% endif %} href="/">首页</a></div>
-			<div class="nav-border"></div>
-			<div class="nav-link nav-link-data"><a {% if path == '/data/' %}class="active"{% endif %} href="/data">视频数据</a></div>
-			<div class="nav-link"><a {% if path == '/edit/' %}class="active"{% endif %} href="/edit">视频剪辑</a></div>
-			<div class="nav-link"><a {% if path == '/rank/' %}class="active"{% endif %} href="/rank">视频评价</a></div>
-		</div>
-		<div class="navbar-button">
-			<div class="nav-link"><a {% if path == '/history/' %}class="active"{% endif %} href="/history">历史剪辑</a></div>
-		</div>
-	</nav>
-	{% endblock header %}
 
-	{% block contents %}
-	{% endblock contents %}
-	{% block foot %}
-	{% endblock %}
+<body>
+	<div class="wrapper">
+		{% include '../components/navbar.html' %}
+
+		{% block contents %}
+		{% endblock contents %}
+
+		{% block sidebar %}
+		{% endblock sidebar %}
+
+		{% block footer %}
+		{% endblock footer %}
+	</div>
 </body>
 
 </html>

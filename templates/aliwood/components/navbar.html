@@ -1,0 +1,19 @@
+<!-- 导航栏-->
+{% load static %}
+<nav class="navbar">
+	<div class="navbar-brand">
+		<a href="/">
+			<img src="{% static 'image/brand.png' %}">
+		</a>
+	</div>
+	<div class="navbar-nav">
+		<div class="nav-link nav-link-home"><a href="/">首页</a></div>
+		<div class="nav-border"></div>
+		<div class="nav-link nav-link-data"><a href="/data">视频数据</a></div>
+		<div class="nav-link"><a href="/edit">视频剪辑</a></div>
+		<div class="nav-link"><a href="/rank">视频评价</a></div>
+	</div>
+	<div class="navbar-button">
+		<div class="nav-link"><a href="/history">历史剪辑</a></div>
+	</div>
+</nav>
