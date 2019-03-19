@@ -1,11 +1,32 @@
 {% extends 'aliwood/layout/base.html' %}
 {% block style %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/data.css' %}" media="all">
+<link rel="stylesheet" type="text/css" href="{% static 'css/rank.css' %}" media="all">
 {% endblock style %}
 
 {% block contents %}
-  <div class="content">
-    rank
+<div class="content">
+  <div class="rank-video">
   </div>
+  <div class="rank-radar">
+  </div>
+  <div class="rank-detail">
+    <div class="rank-score-item">
+      <div class="rank-title">注意力得分</div>
+      <div class="rank-score">90</div>
+    </div>
+    <div class="rank-score-item">
+      <div class="rank-title">视频情感得分</div>
+      <div class="rank-score">90</div>
+    </div>
+    <div class="rank-score-item">
+      <div class="rank-title">视频色调得分</div>
+      <div class="rank-score">90</div>
+    </div>
+    <div class="rank-score-item active">
+      <div class="rank-title">综合得分</div>
+      <div class="rank-score">90</div>
+    </div>
+  </div>
+</div>
 {% endblock contents %}

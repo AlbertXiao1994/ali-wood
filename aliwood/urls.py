@@ -21,6 +21,7 @@ urlpatterns = [
     url(r'^$', view.home, name='home'),
     url(r'^data/', view.data, name='data'),
     url(r'^edit/', view.edit, name='edit'),
-    url(r'^rank/', view.rank, name='rank'),
+    url(r'^rank/gen_rank', view.genRank, name='genRank'),
+    url(r'^rank/rank_result', view.rankResult, name='rankResult'),
     url(r'^history/', view.history, name='history'),
 ]

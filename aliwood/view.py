@@ -15,10 +15,15 @@ def edit(request):
   context['path'] = request.path
   return render(request, 'aliwood/pages/edit.html', context)
 
-def rank(request):
+def genRank(request):
   context          = {}
   context['path'] = request.path
   return render(request, 'aliwood/pages/rank/genRank.html', context)
+
+def rankResult(request):
+  context          = {}
+  context['path'] = request.path
+  return render(request, 'aliwood/pages/rank/rankResult.html', context)
 
 def history(request):
   context          = {}

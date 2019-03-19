@@ -32,4 +32,49 @@
   background: #FACD52;
   font-size: 0.18rem;
   border-radius: 0.15rem;
+  cursor: pointer;
+}
+
+.content .rank-video {
+  position: absolute;
+  top: 1.43rem;
+  left: 1.34rem;
+  width: 9.97rem;
+  height: 5.47rem;
+  background: #000;
+}
+
+.content .rank-radar {
+  position: absolute;
+  top: 1.84rem;
+  right: 1.29rem;
+  width: 5.31rem;
+  height: 4.64rem;
+  background: #000;
+}
+
+.content .rank-detail {
+  position: absolute;
+  top: 7.74rem;
+  left: 1.34rem;
+  font-size: 0.25rem;
+  font-weight: 700;
+}
+
+.rank-detail .rank-score-item {
+  margin-top: 0.10rem;
+}
+
+.rank-detail .rank-score-item .rank-title {
+  display: inline-block;
+  width: 2rem;
+  text-align: left;
+}
+
+.rank-detail .rank-score-item .rank-score {
+  display: inline-block;
+}
+
+.rank-detail .active {
+  color: #FACD52;
 }
