@@ -2,31 +2,75 @@
 {% block style %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/rank.css' %}" media="all">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.min.js"></script>
 {% endblock style %}
 
 {% block contents %}
-<div class="content">
+<div class="content dark full-screen">
   <div class="rank-video">
   </div>
-  <div class="rank-radar">
-  </div>
-  <div class="rank-detail">
-    <div class="rank-score-item">
-      <div class="rank-title">注意力得分</div>
-      <div class="rank-score">90</div>
-    </div>
-    <div class="rank-score-item">
-      <div class="rank-title">视频情感得分</div>
-      <div class="rank-score">90</div>
-    </div>
-    <div class="rank-score-item">
-      <div class="rank-title">视频色调得分</div>
-      <div class="rank-score">90</div>
-    </div>
-    <div class="rank-score-item active">
-      <div class="rank-title">综合得分</div>
-      <div class="rank-score">90</div>
-    </div>
+  <div class="rank-radar" id="rank-radar">
   </div>
 </div>
 {% endblock contents %}
+
+{% block scripts %}
+<script type="text/javascript">
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('rank-radar'));
+
+  // 指定图表的配置项和数据
+  var option = {
+    tooltip: {},
+    radar: {
+      // shape: 'circle',
+      name: {
+        textStyle: {
+          color: '#fff',
+          backgroundColor: '#999',
+          borderRadius: 3,
+          padding: [3, 5]
+        }
+      },
+      indicator: [{
+          name: '注意力',
+          max: 6500
+        },
+        {
+          name: '认知负荷',
+          max: 16000
+        },
+        {
+          name: '声音',
+          max: 30000
+        },
+        {
+          name: '美学',
+          max: 38000
+        },
+        {
+          name: '内容',
+          max: 52000
+        },
+        {
+          name: '情感',
+          max: 25000
+        }
+      ]
+    },
+    series: [{
+      name: '预算',
+      type: 'radar',
+      // areaStyle: {normal: {}},
+      data: [{
+          value: [4300, 10000, 28000, 35000, 50000, 19000],
+          name: '预算分配（Allocated Budget）'
+        }
+      ]
+    }]
+  };
+
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+{% endblock scripts %}
