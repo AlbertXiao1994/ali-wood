@@ -96,11 +96,8 @@ body {
 
 .full-screen {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  padding-top: 1rem;
-  overflow-y: hidden;
+  top: 1rem;
+  bottom: 0;
 }
 
 .paddingLeft {
@@ -109,10 +106,39 @@ body {
 
 .sidebar {
   position: absolute;
-  top: 0;
+  top: 1rem;
   left: 0;
+  bottom: 0;
   width: 3.68rem;
-  height: 100%;
   background: #FACD52;
-  padding-top: 1rem;
+}
+
+.hepler-wrapper {
+  position: absolute;
+  right: 0;
+  top: 1.33rem;
+}
+
+.hepler-icon {
+  position: absolute;
+  right: 0.46rem;
+  top: 1.33rem;
+  width: 0.77rem;
+  height: 0.77rem;
+  font-size: 0.77rem;
+  color: #FACD52;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hepler-icon .glyphicon {
+  top: 0;
+}
+
+.helper-wrapper {
+  position: absolute;
+  right: 0;
+  top: 1.33rem;
+  bottom: 0;
+  width: 4.43rem;
 }
