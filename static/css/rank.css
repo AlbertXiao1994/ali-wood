@@ -30,7 +30,7 @@
   width: 1.87rem;
   height: 0.46rem;
   margin-top: 1.24rem;
-  background: #FACD52;
+  background: #C6C1B3;
   font-size: 0.18rem;
   border-radius: 0.15rem;
   cursor: pointer;
@@ -85,11 +85,12 @@
 }
 
 .rank-tags .rank-tag-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   float: left;
   width: 1.23rem;
   height: 0.35rem;
-  padding-top: 0.06rem;
-  text-align: center;
   font-size: 0.18rem;
   font-weight: bold;
   cursor: pointer;
@@ -98,4 +99,9 @@
 .rank-tags .active {
   background: #5D5D5D;
   color: #fff;
+  pointer-events: none;
+}
+
+.content .upload-btn-active {
+  background: #FACD52;
 }

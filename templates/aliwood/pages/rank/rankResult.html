@@ -11,10 +11,10 @@
 {% block contents %}
 <div class="content dark full-screen">
   <div class="rank-tags">
-    <div class="rank-tag-item active">产品展示</div>
-    <div class="rank-tag-item">产品促销</div>
-    <div class="rank-tag-item">品牌宣传</div>
-    <div class="rank-tag-item">音乐视频</div>
+    <div class="rank-tag-item active"><span>产品展示</span></div>
+    <div class="rank-tag-item"><span>产品促销</span></div>
+    <div class="rank-tag-item"><span>品牌宣传</span></div>
+    <div class="rank-tag-item"><span>音乐视频</span></div>
   </div>
   <div class="rank-video" id="dplayer">
   </div>
@@ -110,6 +110,12 @@
       pic: 'demo.jpg',
       thumbnails: 'thumbnails.jpg'
     },
+  });
+
+  // 切换标签
+  $('.rank-tag-item').click(function () {
+    $('.rank-tag-item').removeClass('active');
+    $(this).addClass('active');
   });
 </script>
 {% endblock scripts %}
