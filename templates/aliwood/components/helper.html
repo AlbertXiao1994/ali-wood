@@ -1,0 +1,33 @@
+<!-- 帮助栏-->
+{% block style %}
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/helper.css' %}" media="all">
+{% endblock style %}
+<div class="hepler-icon-open" id="hepler-icon-open" data-toggle="tooltip" data-placement="bottom" title="帮助">
+	<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+</div>
+<div class="helper-wrapper" id="helper-wrapper">
+	<div class="hepler-icon-close" id="hepler-icon-close">
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+	</div>
+	{% block helper-content %}
+	{% endblock helper-content %}
+</div>
+<script type="text/javascript">
+	// 提示栏初始化
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	});
+	// 打开帮助框
+	$('#hepler-icon-open').click(function() {
+		$("#helper-wrapper").show();
+		$("#hepler-icon-open").hide();
+		$(".content").addClass('paddingSideBar');
+	});
+	// 关闭帮助框
+	$('#hepler-icon-close').click(function() {
+		$("#helper-wrapper").hide();
+		$("#hepler-icon-open").show();
+		$(".content").removeClass('paddingSideBar');
+	});
+</script>

@@ -12,7 +12,7 @@
 	{% block style %}
 	{% endblock style %}
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-	<!-- <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="{% static 'js/base.js' %}"></script>
 	{% block js %}
 	{% endblock js %}
@@ -24,6 +24,9 @@
 
 		{% block contents %}
 		{% endblock contents %}
+
+		{% block helper %}
+		{% endblock helper %}
 
 		{% block sidebar %}
 		{% endblock sidebar %}

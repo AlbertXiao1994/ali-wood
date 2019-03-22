@@ -113,32 +113,6 @@ body {
   background: #FACD52;
 }
 
-.hepler-wrapper {
-  position: absolute;
-  right: 0;
-  top: 1.33rem;
-}
-
-.hepler-icon {
-  position: absolute;
-  right: 0.46rem;
-  top: 1.33rem;
-  width: 0.77rem;
-  height: 0.77rem;
-  font-size: 0.77rem;
-  color: #FACD52;
-  text-align: center;
-  cursor: pointer;
-}
-
-.hepler-icon .glyphicon {
+.glyphicon {
   top: 0;
-}
-
-.helper-wrapper {
-  position: absolute;
-  right: 0;
-  top: 1.33rem;
-  bottom: 0;
-  width: 4.43rem;
 }

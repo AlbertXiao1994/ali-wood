@@ -1,0 +1,46 @@
+.hepler-wrapper {
+  position: absolute;
+  right: 0;
+  top: 1.33rem;
+}
+
+.hepler-icon-open {
+  position: absolute;
+  right: 0.46rem;
+  top: 1.33rem;
+  width: 0.77rem;
+  height: 0.77rem;
+  font-size: 0.77rem;
+  color: #FACD52;
+  text-align: center;
+  cursor: pointer;
+}
+
+.helper-wrapper {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  bottom: 0;
+  width: 4.43rem;
+  padding-top: 0.77rem;
+  padding-left: 0.62rem;
+  padding-right: 1.03rem;
+  background: rgba(83, 83, 83, 0.11);
+}
+
+.helper-wrapper .hepler-icon-close {
+  position: absolute;
+  top: 0.16rem;
+  right: 0.14rem;
+  width: 0.26rem;
+  height: 0.26rem;
+  font-size: 0.26rem;
+  font-weight: 100;
+  color: #5D5D5D;
+  cursor: pointer;
+}
+
+.paddingSideBar {
+  padding-right: 4.43rem;
+}

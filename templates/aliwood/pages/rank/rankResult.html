@@ -2,14 +2,27 @@
 {% block style %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/rank.css' %}" media="all">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.css"
+  media="all">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.js"></script>
 {% endblock style %}
 
 {% block contents %}
 <div class="content dark full-screen">
-  <div class="rank-video">
+  <div class="rank-tags">
+    <div class="rank-tag-item active">产品展示</div>
+    <div class="rank-tag-item">产品促销</div>
+    <div class="rank-tag-item">品牌宣传</div>
+    <div class="rank-tag-item">音乐视频</div>
+  </div>
+  <div class="rank-video" id="dplayer">
   </div>
   <div class="rank-radar" id="rank-radar">
+  </div>
+  <div class="rank-score">
+    <div class="rank-score-title">综合得分</div>
+    <div class="rank-score-detail">90</div>
   </div>
 </div>
 {% endblock contents %}
@@ -23,38 +36,55 @@
   var option = {
     tooltip: {},
     radar: {
-      // shape: 'circle',
+      splitNumber: 4,
+      splitArea: {
+        show: false,
+        areaStyle: {
+          color: 'rgba(255,0,0,0)', // 图表背景的颜色#A3A0FB
+        },
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#A3A0FB',
+        },
+      },
+      splitLine: {
+        show: true,
+        lineStyle: {
+          width: 1,
+          color: '#D2D2D6', // 设置网格的颜色
+        },
+      },
       name: {
         textStyle: {
-          color: '#fff',
-          backgroundColor: '#999',
-          borderRadius: 3,
-          padding: [3, 5]
+          color: '#000',
+          fontFamily: 'Source Sans Pro',
+          fontSize: 15
         }
       },
       indicator: [{
           name: '注意力',
-          max: 6500
-        },
-        {
-          name: '认知负荷',
-          max: 16000
-        },
-        {
-          name: '声音',
-          max: 30000
+          max: 100
         },
         {
           name: '美学',
-          max: 38000
+          max: 100
+        },
+        {
+          name: '声音',
+          max: 100
+        },
+        {
+          name: '认知负荷',
+          max: 100
         },
         {
           name: '内容',
-          max: 52000
+          max: 100
         },
         {
           name: '情感',
-          max: 25000
+          max: 100
         }
       ]
     },
@@ -63,14 +93,23 @@
       type: 'radar',
       // areaStyle: {normal: {}},
       data: [{
-          value: [4300, 10000, 28000, 35000, 50000, 19000],
-          name: '预算分配（Allocated Budget）'
-        }
-      ]
+        value: [80, 90, 80, 70, 80, 95],
+        name: '综合得分'
+      }]
     }]
   };
 
   // 使用刚指定的配置项和数据显示图表。
   myChart.setOption(option);
+
+  // 加载dplayer
+  var dp = new DPlayer({
+    container: document.getElementById('dplayer'),
+    video: {
+      url: '/media/video/movie.ogg',
+      pic: 'demo.jpg',
+      thumbnails: 'thumbnails.jpg'
+    },
+  });
 </script>
 {% endblock scripts %}

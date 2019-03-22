@@ -1,0 +1,12 @@
+{% extends 'aliwood/layout/base.html' %}
+{% block style %}
+{% load static %}
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/fullScreen.css' %}" media="all"> -->
+{% endblock style %}
+
+{% block helper %}
+  <div class="helper">
+    {% block helper-content %}
+    {% endblock helper-content %}
+  </div>
+{% endblock sidebar %}
