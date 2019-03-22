@@ -1,9 +1,14 @@
 .content {
+  padding-top: 1.93rem;
+}
+
+.flexBox {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
 }
+
 .content .upload-icon img {
   width: 1.31rem;
   cursor: pointer;
@@ -37,7 +42,7 @@
 
 .content .rank-video {
   position: absolute;
-  top: 1.43rem;
+  top: 2.84rem;
   left: 1.34rem;
   width: 9.97rem;
   height: 5.47rem;
@@ -45,9 +50,56 @@
 }
 
 .content .rank-radar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 1.84rem;
+  top: 3.07rem;
   right: 1.29rem;
   width: 27.6%;
-  height: 42.9%;
+  height: 43.1%;
+}
+
+.content .rank-score {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 3.07rem;
+  right: 1.29rem;
+  width: 27.6%;
+  height: 43.1%;
+}
+
+.rank-score .rank-score-title {
+  font-size: 0.18rem;
+  text-align: center;
+}
+
+.rank-score .rank-score-detail {
+  font-size: 0.74rem;
+  font-weight: bold;
+}
+
+.rank-tags {
+  position: absolute;
+  top: 2.23rem;
+  left: 1.34rem;
+}
+
+.rank-tags .rank-tag-item {
+  float: left;
+  width: 1.23rem;
+  height: 0.35rem;
+  padding-top: 0.06rem;
+  text-align: center;
+  font-size: 0.18rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.rank-tags .active {
+  background: #5D5D5D;
+  color: #fff;
 }

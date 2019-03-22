@@ -14,7 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-
+from django.conf.urls.static import static
+from django.conf import settings
 from . import view
 
 urlpatterns = [
@@ -25,3 +26,5 @@ urlpatterns = [
     url(r'^rank/rank_result', view.rankResult, name='rankResult'),
     url(r'^history/', view.history, name='history'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
