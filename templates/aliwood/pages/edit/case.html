@@ -1,0 +1,239 @@
+{% extends 'aliwood/layout/with-siderbar-helper.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/data.css' %}" media="all">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.js"></script>
+{% endblock style %}
+
+{% block contents %}
+<div class="content dark full-screen paddingLeft">
+  <div class="video-list-wrapper">
+    <div class="video-item">
+      <div class="video-item-icon">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+      </div>
+      <div class="video-item-thumbnail">
+        <img src="{% static 'image/video.jpg' %}">
+      </div>
+    </div>
+    <div class="video-item">
+      <div class="video-item-icon">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+      </div>
+      <div class="video-item-thumbnail">
+        <img src="{% static 'image/video.jpg' %}">
+      </div>
+    </div>
+    <div class="video-item">
+      <div class="video-item-icon">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+      </div>
+      <div class="video-item-thumbnail">
+        <img src="{% static 'image/video.jpg' %}">
+      </div>
+    </div>
+    <div class="video-item">
+      <div class="video-item-icon">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+      </div>
+      <div class="video-item-thumbnail">
+        <img src="{% static 'image/video.jpg' %}">
+      </div>
+    </div>
+    <div class="video-item">
+      <div class="video-item-icon">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+      </div>
+      <div class="video-item-thumbnail">
+        <img src="{% static 'image/video.jpg' %}">
+      </div>
+    </div>
+    <div class="video-item">
+      <div class="video-item-icon">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+      </div>
+      <div class="video-item-thumbnail">
+        <img src="{% static 'image/video.jpg' %}">
+      </div>
+    </div>
+    <div class="video-item">
+      <div class="video-item-icon">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+      </div>
+      <div class="video-item-thumbnail">
+        <img src="{% static 'image/video.jpg' %}">
+      </div>
+    </div>
+    <div class="video-item">
+      <div class="video-item-icon">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+      </div>
+      <div class="video-item-thumbnail">
+        <img src="{% static 'image/video.jpg' %}">
+      </div>
+    </div>
+    <div class="video-item">
+      <div class="video-item-icon">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+      </div>
+      <div class="video-item-thumbnail">
+        <img src="{% static 'image/video.jpg' %}">
+      </div>
+    </div>
+    <div class="video-item">
+      <div class="video-item-icon">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+      </div>
+      <div class="video-item-thumbnail">
+        <img src="{% static 'image/video.jpg' %}">
+      </div>
+    </div>
+  </div>
+  <nav class="nav-pagination" aria-label="Page navigation">
+    <ul class="pagination">
+      <li>
+        <a href="#" aria-label="Previous">
+          <span aria-hidden="true">上一页</span>
+        </a>
+      </li>
+      <li class="active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">...</a></li>
+      <li>
+        <a href="#" aria-label="Next">
+          <span aria-hidden="true">下一页</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="player-shadow flexColumn">
+    <div class="player-shadow-close" id="player-btn-close">
+      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    </div>
+    <div class="shadow-player-wrapper flexCenter">
+      <div class="shadow-player-btn"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></div>
+      <div class="shadow-player" id="dplayer"></div>
+      <div class="shadow-player-btn"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></div>
+    </div>
+    <div class="upload-btn">
+      <a href="#">查看视频分析</a>
+    </div>
+  </div>
+</div>
+{% endblock contents %}
+
+{% block sidebar %}
+<div class="sidebar">
+  <div class="filter">
+    <div class="filter-title">性别</div>
+    <div class="filter-content">
+      <div class="filter-item-group">
+        <div class="filter-item">男</div>
+        <div class="filter-item active">女</div>
+        <div class="filter-item">儿童</div>
+        <div class="filter-item">男女通用</div>
+      </div>
+    </div>
+  </div>
+  <div class="filter">
+    <div class="filter-title">产品类型</div>
+    <div class="filter-content">
+      <div class="filter-item-group">
+        <div class="filter-item">上衣</div>
+        <div class="filter-item active">外套</div>
+        <div class="filter-item">毛衣</div>
+        <div class="filter-item">衬衫</div>
+      </div>
+      <div class="filter-item-group">
+        <div class="filter-item">卫衣</div>
+        <div class="filter-item">T恤</div>
+        <div class="filter-item">连衣裙</div>
+        <div class="filter-item">长裙</div>
+      </div>
+      <div class="filter-item-group">
+        <div class="filter-item">短裙</div>
+        <div class="filter-item">内衣</div>
+        <div class="filter-item">长裤</div>
+        <div class="filter-item">短裤</div>
+      </div>
+      <div class="filter-item-group">
+        <div class="filter-item">墨镜</div>
+        <div class="filter-item">包</div>
+        <div class="filter-item">鞋</div>
+        <div class="filter-item">其他</div>
+      </div>
+    </div>
+  </div>
+  <div class="filter">
+    <div class="filter-title">拍摄场景</div>
+    <div class="filter-content">
+      <div class="filter-item-group">
+        <div class="filter-item">室内</div>
+        <div class="filter-item active">室外</div>
+      </div>
+    </div>
+  </div>
+  <div class="filter">
+    <div class="filter-title">业务场景</div>
+    <div class="filter-content">
+      <div class="filter-item-group">
+        <div class="filter-item">产品上新</div>
+        <div class="filter-item active">品牌宣传</div>
+      </div>
+    </div>
+  </div>
+  <div class="filter">
+    <div class="filter-title">节奏风格</div>
+    <div class="filter-content">
+      <div class="filter-item-group">
+        <div class="filter-item">动感</div>
+        <div class="filter-item active">变奏</div>
+        <div class="filter-item">日常</div>
+        <div class="filter-item active">平缓</div>
+      </div>
+    </div>
+  </div>
+  <div class="filter">
+    <div class="filter-title">画面风格</div>
+    <div class="filter-content">
+      <div class="filter-item-group">
+        <div class="filter-item">时尚</div>
+        <div class="filter-item active">优雅</div>
+        <div class="filter-item">可爱</div>
+        <div class="filter-item">自然</div>
+        <div class="filter-item">性感</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock sidebar %}
+
+{% block scripts %}
+<script type="text/javascript">
+  // 切换标签
+  $('.filter-item').click(function () {
+    $(this).parent().children().each(function () {
+      $(this).removeClass('active');
+    });
+    $(this).parent().siblings().each(function () {
+      $(this).children().each(function () {
+        $(this).removeClass('active');
+      });
+    });
+    $(this).addClass('active');
+  });
+
+  // 加载dplayer
+  var dp = new DPlayer({
+    container: document.getElementById('dplayer'),
+    video: {
+      url: '/media/video/movie.ogg',
+      pic: 'demo.jpg',
+      thumbnails: 'thumbnails.jpg'
+    },
+  });
+</script>
+<script type="text/javascript" src="{% static 'js/player-shadow.js' %}"></script>
+{% endblock scripts %}
