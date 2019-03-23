@@ -116,3 +116,14 @@ body {
 .glyphicon {
   top: 0;
 }
+
+.dropzone {
+  min-height: 0 !important;
+  border: 0 !important;
+  background: none !important;
+  padding: 0 !important;
+}
+
+.dropzone .dz-message {
+  margin: 0;
+}

@@ -44,3 +44,17 @@
 .paddingSideBar {
   padding-right: 4.43rem;
 }
+
+.helper-wrapper .helper-title {
+  font-size: 0.25rem;
+  margin-bottom: 0.35rem;
+  font-weight: bold;
+}
+
+.helper-content .helper-content-item  {
+  font-size: 0.18rem;
+}
+
+.helper-content-item .helper-content-item-subtitle {
+  font-weight: bold;
+}

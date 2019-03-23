@@ -2,20 +2,30 @@
 {% block style %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/rank.css' %}" media="all">
+<link rel="stylesheet" type="text/css" href="https://libs.cdnjs.net/dropzone/5.5.1/min/dropzone.min.css" media="all">
 {% endblock style %}
+{% block js %}
+<script type="text/javascript" src="https://libs.cdnjs.net/dropzone/5.5.1/min/dropzone.min.js"></script>
+{% endblock js %}
 
 {% block contents %}
 <div class="content dark full-screen flexBox">
-  <div class="upload-icon">
-    <img src="{% static 'image/upload.png' %}">
-  </div>
+  <form class="upload-icon dropzone" action="/file-upload" id="my-awesome-dropzone">
+    <img src="{% static 'image/upload.png' %}" class="dz-message">
+  </form>
   <div class="upload-describe">
     <p>点击“+”</p>
     <p>或拖拽文件到虚线框内</p>
     <p>来上传自己的案例</p>
   </div>
-  <div class="upload-btn upload-btn-active">
+  <div class="upload-btn">
     <span>生成评价</span>
   </div>
 </div>
 {% endblock contents %}
+
+{% block scripts %}
+<script>
+  Dropzone.options.maxFilesize = 1;
+</script>
+{% endblock scripts %}
