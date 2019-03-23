@@ -36,6 +36,11 @@
   cursor: pointer;
 }
 
+.content .upload-btn a {
+  color: #43425D;
+  text-decoration: none;
+}
+
 .content .rank-video {
   position: absolute;
   top: 2.84rem;
