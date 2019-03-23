@@ -3,7 +3,7 @@
 	{% load static %}
 	<link rel="stylesheet" type="text/css" href="{% static 'css/helper.css' %}" media="all">
 {% endblock style %}
-<div class="hepler-icon-open" id="hepler-icon-open" data-toggle="tooltip" data-placement="bottom" title="帮助">
+<div class="hepler-icon-open" id="hepler-icon-open">
 	<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
 </div>
 <div class="helper-wrapper" id="helper-wrapper">
@@ -28,11 +28,13 @@
 		$("#helper-wrapper").show();
 		$("#hepler-icon-open").hide();
 		$(".content").addClass('paddingSideBar');
+		$(".video-list-wrapper").css('padding-right', '0.71rem');
 	});
 	// 关闭帮助框
 	$('#hepler-icon-close').click(function() {
 		$("#helper-wrapper").hide();
 		$("#hepler-icon-open").show();
 		$(".content").removeClass('paddingSideBar');
+		$(".video-list-wrapper").css('padding-right', '2.17rem');
 	});
 </script>

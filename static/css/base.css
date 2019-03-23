@@ -91,6 +91,7 @@ body {
 }
 
 .content {
+  position: relative;
   width: 100%;
 }
 
@@ -172,4 +173,71 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+
+.content .upload-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.24rem;
+  background: #C6C1B3;
+  font-size: 0.18rem;
+  border-radius: 0.15rem;
+  cursor: pointer;
+}
+
+.content .upload-btn a {
+  color: #43425D;
+  text-decoration: none;
+}
+
+.flexColumn {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow-player-wrapper .shadow-player-btn {
+  padding: 0 0.3rem;
+  font-size: 0.6rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.player-shadow {
+  display: none;
+  position: absolute;
+  top: 0.45rem;
+  left: 3.68rem;
+  right: 0;
+  bottom: 1.11rem;
+  background: rgba(137, 137, 137, 0.9);
+  z-index: 1000;
+}
+
+.player-shadow .shadow-player {
+  width: 7.6rem;
+  height: 4.17rem;
+}
+
+.player-shadow-close {
+  position: absolute;
+  top: 0.66rem;
+  right: 0.64rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.26rem;
+}
+
+.dplayer-video-wrap {
+  background: #43425D !important;
 }
