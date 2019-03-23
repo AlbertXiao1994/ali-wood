@@ -1,0 +1,33 @@
+.sidebar {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 0 0.44rem;
+}
+
+.sidebar .filter {
+  padding-bottom: 0.14rem;
+  margin-bottom: 1.97rem;
+  border-bottom: 2px solid #fff;
+  cursor: pointer;
+}
+
+.filter .filter-title {
+  font-size: 0.35rem;
+  font-weight: bold;
+  margin-bottom: 0.07rem;
+}
+
+.filter .filter-title a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.sidebar .active {
+  border-color: #5D5D5D;
+  color: #5D5D5D;
+}
+
+.sidebar .active a {
+  color: #5D5D5D;
+}

@@ -11,10 +11,10 @@ def data(request):
   context['path'] = request.path
   return render(request, 'aliwood/pages/data.html', context)
 
-def edit(request):
+def styleTemplat(request):
   context          = {}
   context['path'] = request.path
-  return render(request, 'aliwood/pages/edit.html', context)
+  return render(request, 'aliwood/pages/edit/style-templat.html', context)
 
 def genRank(request):
   context          = {}
