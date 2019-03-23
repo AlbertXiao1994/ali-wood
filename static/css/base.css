@@ -94,6 +94,10 @@ body {
   width: 100%;
 }
 
+.padding83 {
+  padding: 0.83rem;
+}
+
 .full-screen {
   position: absolute;
   top: 1rem;
@@ -126,4 +130,46 @@ body {
 
 .dropzone .dz-message {
   margin: 0;
+}
+
+.navbar-button .status-icon {
+  position: absolute;
+  top: 0.15rem;
+  right: 0.2rem;
+}
+
+.history-status {
+  width: 0.18rem;
+  height: 0.18rem;
+  border: 2.5px solid #5D5D5D;
+  border-radius: 0.09rem;
+}
+
+.history-status-optimizing {
+  background: #FACD52;
+}
+
+.history-status-editing {
+  background: #F26D6D;
+}
+
+.history-status-edited {
+  background: #87F26D;
+}
+
+.history-status-optimized {
+  background: #A3A0FB;
+}
+
+.content-section .content-section-title {
+  height: 0.59rem;
+  font-size: 0.35rem;
+  font-weight: bold;
+  border-bottom: 2px solid #5D5D5D;
+}
+
+.content-section .content-section-main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }

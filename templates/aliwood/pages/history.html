@@ -1,11 +1,100 @@
 {% extends 'aliwood/layout/base.html' %}
 {% block style %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/data.css' %}" media="all">
+<link rel="stylesheet" type="text/css" href="{% static 'css/history.css' %}" media="all">
 {% endblock style %}
 
 {% block contents %}
-  <div class="content dark">
-    history
+<div class="content dark full-screen flexBox padding83">
+  <div class="content-section">
+    <div class="content-section-title">历史剪辑</div>
+    <div class="content-section-main">
+      <div class="history-item">
+        <img src="{% static 'image/history.png' %}" class="history-img-top" alt="...">
+        <div class="item-shadow">
+          <div class="item-shadow-delete">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </div>
+          <div class="item-shadow-status">
+            <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="history-item-body">
+          <div class="history-status history-status-editing"></div>
+          <div class="history-item-title">剪辑进行中</div>
+          <div class="history-item-text history-item-basic">日常风格/30秒</div>
+          <div class="history-item-text history-item-time">2019/03/12 17:30:00</div>
+        </div>
+      </div>
+      <div class="history-item">
+        <img src="{% static 'image/history.png' %}" class="history-img-top" alt="...">
+        <div class="item-shadow">
+          <div class="item-shadow-delete">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </div>
+          <div class="item-shadow-status">
+            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="history-item-body">
+          <div class="history-status history-status-edited"></div>
+          <div class="history-item-title">完成剪辑</div>
+          <div class="history-item-text history-item-basic">日常风格/30秒</div>
+          <div class="history-item-text history-item-time">2019/03/12 17:30:00</div>
+        </div>
+      </div>
+      <div class="history-item">
+        <img src="{% static 'image/history.png' %}" class="history-img-top" alt="...">
+        <div class="item-shadow">
+          <div class="item-shadow-delete">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </div>
+          <div class="item-shadow-status">
+            <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="history-item-body">
+          <div class="history-status history-status-optimizing"></div>
+          <div class="history-item-title">视频优化中</div>
+          <div class="history-item-text history-item-basic">日常风格/30秒</div>
+          <div class="history-item-text history-item-time">2019/03/12 17:30:00</div>
+        </div>
+      </div>
+      <div class="history-item">
+        <img src="{% static 'image/history.png' %}" class="history-img-top" alt="...">
+        <div class="item-shadow">
+          <div class="item-shadow-delete">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </div>
+          <div class="item-shadow-status">
+            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="history-item-body">
+          <div class="history-status history-status-optimized"></div>
+          <div class="history-item-title">成片</div>
+          <div class="history-item-text history-item-basic">日常风格/30秒</div>
+          <div class="history-item-text history-item-time">2019/03/12 17:30:00</div>
+        </div>
+      </div>
+      <div class="history-item">
+        <img src="{% static 'image/history.png' %}" class="history-img-top" alt="...">
+        <div class="item-shadow">
+          <div class="item-shadow-delete">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </div>
+          <div class="item-shadow-status">
+            <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="history-item-body">
+          <div class="history-status history-status-optimized"></div>
+          <div class="history-item-title">成片</div>
+          <div class="history-item-text history-item-basic">日常风格/30秒</div>
+          <div class="history-item-text history-item-time">2019/03/12 17:30:00</div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 {% endblock contents %}
