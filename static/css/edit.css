@@ -1,3 +1,7 @@
+.content {
+  padding: 0.75rem 0.75rem 0.75rem 4.63rem;
+}
+
 .sidebar {
   display: flex;
   flex-flow: column wrap;
@@ -30,4 +34,69 @@
 
 .sidebar .active a {
   color: #5D5D5D;
+}
+
+.content-section-items {
+  position: relative;
+}
+
+.content-section-items .video-item {
+  display: inline-block;
+  position: relative;
+  width: 1.37rem;
+  height: 1.72rem;
+  padding: 0.08rem 0.08rem 0 0.08rem;
+  background: #F7F7F5;
+}
+
+.content-section-items .active {
+  background: #FACD52;
+}
+
+.content-section-items .video-item .video-item-thumbnail {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.content-section-items .video-item .video-item-describe {
+  text-align: center;
+  font-size: 0.21rem;
+  font-weight: bold;
+}
+
+.content-section .upload-icon {
+  width: 1.31rem;
+  height: 1.31rem;
+}
+
+.content .upload-btn {
+  position: absolute;
+  bottom: 1.03rem;
+  right: 0.75rem;
+  width: 2.47rem;
+  height: 0.64rem;
+}
+
+.content .active {
+  background: #FACD52;
+}
+
+.style-template .upload-icon img {
+  width: 1.31rem;
+  height: 1.31rem;
+}
+
+.case-simulate .upload-icon img {
+  width: 1.31rem;
+  height: 1.31rem;
+}
+
+.case-simulate .content-section-item {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.case-simulate .content-section-item img {
+  width: 1.31rem;
+  height: 1.31rem;
 }

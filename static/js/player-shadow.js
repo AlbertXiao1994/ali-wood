@@ -8,6 +8,8 @@ $('.video-item').click(function () {
   $("#hepler-icon-open").hide();
   $('.player-shadow').show();
   $('.player-shadow').css('display', 'flex');
+  $(this).siblings().removeClass('active');
+  $(this).addClass('active');
 });
 
 // 关闭视频遮罩

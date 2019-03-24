@@ -1,0 +1,118 @@
+{% extends 'aliwood/layout/with-siderbar-helper.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/edit.css' %}" media="all">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.css">
+{% endblock style %}
+{% block js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.js"></script>
+<script type="text/javascript" src="https://libs.cdnjs.net/dropzone/5.5.1/min/dropzone.min.js"></script>
+{% endblock js %}
+
+{% block contents %}
+<div class="content dark full-screen paddingLeft style-template">
+  <div class="content-section">
+    <div class="content-section-title">风格选择<span>Template</span></div>
+    <div class="content-section-items">
+      <div class="video-item">
+        <div class="video-item-thumbnail">
+          <img src="{% static 'image/video.jpg' %}">
+          <div class="video-item-icon">
+            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="video-item-describe">动感</div>
+      </div>
+      <div class="video-item">
+        <div class="video-item-icon">
+          <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+        </div>
+        <div class="video-item-thumbnail">
+          <img src="{% static 'image/video.jpg' %}">
+        </div>
+        <div class="video-item-describe">变奏</div>
+      </div>
+      <div class="video-item">
+        <div class="video-item-icon">
+          <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+        </div>
+        <div class="video-item-thumbnail">
+          <img src="{% static 'image/video.jpg' %}">
+        </div>
+        <div class="video-item-describe">日常</div>
+      </div>
+      <div class="video-item">
+        <div class="video-item-icon">
+          <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+        </div>
+        <div class="video-item-thumbnail">
+          <img src="{% static 'image/video.jpg' %}">
+        </div>
+        <div class="video-item-describe">舒缓</div>
+      </div>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="content-section-title">
+      <div>素材上传<span>Upload Files</div></span>
+      <div class="content-section-btn">
+        <span class="glyphicon glyphicon-trash"></span>
+        清空
+      </div>
+    </div>
+    <form class="upload-icon dropzone" action="/file-upload" id="my-awesome-dropzone">
+      <img src="{% static 'image/upload.png' %}" class="dz-message">
+    </form>
+    <!-- <div class="upload-describe">
+      <p>点击“+”</p>
+      <p>或拖拽文件到虚线框内</p>
+      <p>来上传自己的案例</p>
+    </div> -->
+  </div>
+  <div class="upload-btn active">
+    <a href="#">开始剪辑</a>
+  </div>
+  <div class="player-shadow flexColumn">
+    <div class="player-shadow-close" id="player-btn-close">
+      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    </div>
+    <div class="shadow-player-wrapper flexCenter">
+      <div class="shadow-player-btn"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></div>
+      <div class="shadow-player" id="dplayer"></div>
+      <div class="shadow-player-btn"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></div>
+    </div>
+    <div class="upload-btn">
+      <a href="#">查看视频分析</a>
+    </div>
+  </div>
+</div>
+{% endblock contents %}
+
+{% block sidebar %}
+<div class="sidebar">
+  <div class="filter active">
+    <div class="filter-title"><a href="./style_templat">风格模板</a></div>
+  </div>
+  <div class="filter">
+    <div class="filter-title"><a href="./case_simulate">案例模仿</a></div>
+  </div>
+  <div class="filter">
+    <div class="filter-title"><a href="./custom_params">参数自定义</a></div>
+  </div>
+</div>
+{% endblock sidebar %}
+
+{% block scripts %}
+<script type="text/javascript">
+  // 加载dplayer
+  var dp = new DPlayer({
+    container: document.getElementById('dplayer'),
+    video: {
+      url: '/media/video/movie.ogg',
+      pic: 'demo.jpg',
+      thumbnails: 'thumbnails.jpg'
+    },
+  });
+</script>
+<script type="text/javascript" src="{% static 'js/player-shadow.js' %}"></script>
+{% endblock scripts %}

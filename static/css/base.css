@@ -162,11 +162,31 @@ body {
   background: #A3A0FB;
 }
 
+.content-section {
+  position: relative;
+}
+
 .content-section .content-section-title {
   height: 0.59rem;
   font-size: 0.35rem;
   font-weight: bold;
   border-bottom: 2px solid #5D5D5D;
+  margin-bottom: 0.2rem;
+}
+
+.content-section-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.25rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.content-section .content-section-title span {
+  display: inline-block;
+  padding-left: 0.05rem;
+  font-size: 0.18rem;
 }
 
 .content-section .content-section-main {
@@ -240,4 +260,32 @@ body {
 
 .dplayer-video-wrap {
   background: #43425D !important;
+}
+
+.video-item {
+  cursor: pointer;
+}
+
+.video-item-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 0.46rem;
+  color: #fff;
+  z-index: 2;
+}
+
+.video-item-thumbnail {
+  width: 100%;
+  height: 100%;
+}
+
+.video-item-thumbnail img {
+  width: 100%;
+  height: 100%;
 }

@@ -14,7 +14,17 @@ def data(request):
 def styleTemplat(request):
   context          = {}
   context['path'] = request.path
-  return render(request, 'aliwood/pages/edit/style-templat.html', context)
+  return render(request, 'aliwood/pages/edit/style-template.html', context)
+
+def caseSimulate(request):
+  context          = {}
+  context['path'] = request.path
+  return render(request, 'aliwood/pages/edit/case-simulate.html', context)
+
+def caseSimulateCases(request):
+  context          = {}
+  context['path'] = request.path
+  return render(request, 'aliwood/pages/edit/case.html', context)
 
 def genRank(request):
   context          = {}

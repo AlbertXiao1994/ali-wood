@@ -51,33 +51,6 @@
   cursor: pointer;
 }
 
-.video-item-icon {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  font-size: 0.46rem;
-  color: #fff;
-  z-index: 2;
-}
-
-.video-item .video-item-thumbnail {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.video-item-thumbnail img {
-  width: 100%;
-  height: 100%;
-}
-
 .nav-pagination {
   display: flex;
   justify-content: center;
