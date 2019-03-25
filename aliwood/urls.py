@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^edit/case_simulate/case', view.caseSimulateCases, name='caseSimulateCases'),
     url(r'^edit/case_simulate', view.caseSimulate, name='caseSimulate'),
     url(r'^edit/gen_video', view.genVideo, name='genVideo'),
+    url(r'^edit/custom_params', view.customParam, name='customParam'),
     url(r'^rank/gen_rank', view.genRank, name='genRank'),
     url(r'^rank/rank_result', view.rankResult, name='rankResult'),
     url(r'^history/', view.history, name='history'),

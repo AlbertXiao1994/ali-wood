@@ -26,6 +26,11 @@ def caseSimulate(request):
   context['path'] = request.path
   return render(request, 'aliwood/pages/edit/case-simulate.html', context)
 
+def customParam(request):
+  context          = {}
+  context['path'] = request.path
+  return render(request, 'aliwood/pages/edit/custom-params.html', context)
+
 def caseSimulateCases(request):
   context          = {}
   context['path'] = request.path
