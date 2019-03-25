@@ -20,10 +20,12 @@ from . import view
 
 urlpatterns = [
     url(r'^$', view.home, name='home'),
-    url(r'^data/', view.data, name='data'),
+    url(r'^data/$', view.data, name='data'),
+    url(r'^data/upload', view.upload, name='upload'),
     url(r'^edit/style_templat', view.styleTemplat, name='styleTemplat'),
-     url(r'^edit/case_simulate/case', view.caseSimulateCases, name='caseSimulateCases'),
+    url(r'^edit/case_simulate/case', view.caseSimulateCases, name='caseSimulateCases'),
     url(r'^edit/case_simulate', view.caseSimulate, name='caseSimulate'),
+    url(r'^edit/gen_video', view.genVideo, name='genVideo'),
     url(r'^rank/gen_rank', view.genRank, name='genRank'),
     url(r'^rank/rank_result', view.rankResult, name='rankResult'),
     url(r'^history/', view.history, name='history'),

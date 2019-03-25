@@ -9,7 +9,12 @@ def home(request):
 def data(request):
   context          = {}
   context['path'] = request.path
-  return render(request, 'aliwood/pages/data.html', context)
+  return render(request, 'aliwood/pages/data/data.html', context)
+
+def upload(request):
+  context          = {}
+  context['path'] = request.path
+  return render(request, 'aliwood/pages/data/upload.html', context)
 
 def styleTemplat(request):
   context          = {}
@@ -25,6 +30,11 @@ def caseSimulateCases(request):
   context          = {}
   context['path'] = request.path
   return render(request, 'aliwood/pages/edit/case.html', context)
+
+def genVideo(request):
+  context          = {}
+  context['path'] = request.path
+  return render(request, 'aliwood/pages/edit/gen-video.html', context)
 
 def genRank(request):
   context          = {}

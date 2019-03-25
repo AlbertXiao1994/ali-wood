@@ -1,0 +1,97 @@
+.upload-wrapper {
+  position: relative;
+  width: 14.53rem;
+  height: 7.32rem;
+  background: #fff;
+}
+
+.upload-wrapper .upload-main {
+  width: 5.46rem;
+  height: 7.32rem;
+}
+
+.upload-main-title {
+  text-align: center;
+  margin-top: 0.39rem;
+  margin-bottom: 0.72rem;
+  font-size: 0.25rem;
+}
+
+.upload-icon {
+  width: 2.63rem;
+  height: 2.63rem;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.upload-icon img {
+  width: 2.63rem;
+  height: 2.63rem;
+}
+
+.upload-describe {
+  margin-top: 0.34rem;
+}
+
+.upload-describe p {
+  text-align: center;
+  font-size: 0.17rem;
+  line-height: 0.24rem;
+  margin-bottom: 0;
+  color: #4D4F5C;
+}
+
+.upload-main .upload-btn {
+  width: 1.87rem;
+  height: 0.46rem;
+  margin-top: 0.82rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.upload-main .active {
+  background: #F7CB51;
+}
+
+.upload-params {
+  position: absolute;
+  top: 0;
+  left: 5.46rem;
+  width: 9.07rem;
+  padding-right: 1.33rem;
+}
+
+.upload-params .upload-params-title {
+  margin-top: 0.39rem;
+  margin-bottom: 0.32rem;
+  font-size: 0.25rem;
+}
+
+.upload-params-item {
+  margin-top: 0.16rem;
+  padding-bottom: 0.12rem;
+  border-bottom: 2px solid #5D5D5D;
+}
+
+.upload-params-item-title {
+  font-size: 0.25rem;
+}
+
+.upload-params-item-body {
+  max-width: 6rem;
+}
+
+.upload-params-item-body .active {
+  background: #5D5D5D;
+  color: #FACD52;
+}
+
+.upload-params-item-body .upload-param {
+  float: left;
+  padding: 0 0.05rem;
+  margin-right: 0.2rem;
+  font-size: 0.18rem;
+  border-radius: 0.05rem;
+  cursor: pointer;
+}

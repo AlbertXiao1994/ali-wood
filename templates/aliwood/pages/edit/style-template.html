@@ -1,4 +1,4 @@
-{% extends 'aliwood/layout/with-siderbar-helper.html' %}
+{% extends 'aliwood/layout/with-sidebar-helper.html' %}
 {% block style %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/edit.css' %}" media="all">
@@ -70,19 +70,23 @@
     </div> -->
   </div>
   <div class="content-btn upload-btn active">
-    <a href="#">开始剪辑</a>
+    <a href="./gen_video">开始剪辑</a>
   </div>
   <div class="player-shadow flexColumn">
     <div class="player-shadow-close" id="player-btn-close">
       <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
     </div>
+    <div class="video-title">动感</div>
     <div class="shadow-player-wrapper flexCenter">
       <div class="shadow-player-btn"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></div>
       <div class="shadow-player" id="dplayer"></div>
       <div class="shadow-player-btn"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></div>
     </div>
-    <div class="upload-btn">
-      <a href="#">查看视频分析</a>
+    <div class="video-describe">
+      动感风格的镜头剪切节奏较快，时长变化较大。镜头切换时遵循前后画面的视觉连贯性。
+    </div>
+    <div class="select-btn active">
+      <a href="#">使用这个风格</a>
     </div>
   </div>
 </div>

@@ -100,3 +100,131 @@
   width: 1.31rem;
   height: 1.31rem;
 }
+
+.select-btn {
+  margin: 0 auto;
+  margin-top: 0.39rem;
+  width: 1.41rem;
+  height: 0.37rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.select-btn a {
+  text-decoration: none;
+  font-size: 0.18rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.player-shadow .video-title {
+  width: 7.6rem;
+  font-size: 0.3rem;
+  font-weight: bold;
+  color: #fff;
+  padding-bottom: 0.16rem;
+  margin-bottom: 0.2rem;
+  border-bottom: 3px solid #fff;
+}
+
+.player-shadow .video-describe {
+  margin-top: 0.2rem;
+  font-size: 0.18rem;
+  color: #fff;
+}
+
+.sidebar .filter-tip {
+  color: #fff;
+  font-size: 0.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.sidebar .filter-title {
+  color: #fff;
+}
+
+.content-box {
+  width: 11.77rem;
+  height: 6.46rem;
+  background: #43425D;
+  text-align: center;
+  font-weight: bold;
+  margin-left: 1.61rem;
+}
+
+.content-box .content-box-title {
+  font-size: 0.35rem;
+  color: #fff;
+  padding-top: 2.22rem;
+  margin-bottom: 0.93rem;
+}
+
+.content-box .content-box-subtitle {
+  font-size: 0.30rem;
+  color: #AAA9A9;
+  margin-bottom: 0.29rem;
+}
+
+.content-box  .progress {
+  width: 7.17rem;
+  margin: 0 auto;
+  border-radius: 0.08rem;
+}
+
+.content-tip {
+  margin: 0.22rem auto 0 auto;
+  text-align: center;
+  color: #5D5D5D;
+}
+
+.content-tip .content-tip-title {
+  font-weight: bold;
+  font-size: 0.3rem;
+  margin-bottom: 0.18rem;
+}
+
+.content-tip .content-tip-detail {
+  font-size: 0.18rem;
+  line-height: 0.3rem;
+}
+
+.content-tip .content-tip-detail p {
+  margin-bottom: 0;
+}
+
+.video-add-effect {
+  position: relative;
+  margin-top: 1.9rem;
+  padding-left: 0.58rem;
+}
+
+.video-add-effect .video-player {
+  width: 8.24rem;
+  height: 4.52rem;
+}
+
+.video-add-effect .spec-effect-group {
+  position: absolute;
+  top: 0;
+  right: 0.52rem;
+  width: 5.75rem;
+}
+
+.spec-effect-group .spec-effect-title {
+  color: #5D5D5D;
+  font-size: 0.3rem;
+  font-weight: bold;
+  padding-bottom: 0.13rem;
+  border-bottom: 3px solid #5D5D5D;
+  margin-bottom: 0.35rem;
+}
+
+.spec-effect-item {
+  margin-bottom: 0.65rem;
+}
+
+.spec-effect-item .upload-icon img {
+  width: 1.31rem;
+  height: 1.31rem;
+  cursor: pointer;
+}
