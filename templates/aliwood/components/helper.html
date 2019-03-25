@@ -27,14 +27,16 @@
 	$('#hepler-icon-open').click(function() {
 		$("#helper-wrapper").show();
 		$("#hepler-icon-open").hide();
-		$(".content").addClass('paddingSideBar');
+		$(".content").addClass('paddingHelperBar');
 		$(".video-list-wrapper").css('padding-right', '0.71rem');
+		$(".content-btn").css('right', '5.17rem');
 	});
 	// 关闭帮助框
 	$('#hepler-icon-close').click(function() {
 		$("#helper-wrapper").hide();
 		$("#hepler-icon-open").show();
-		$(".content").removeClass('paddingSideBar');
+		$(".content").removeClass('paddingHelperBar');
 		$(".video-list-wrapper").css('padding-right', '2.17rem');
+		$(".content-btn").css('right', '1.04rem');
 	});
 </script>

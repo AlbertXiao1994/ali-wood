@@ -105,7 +105,7 @@ body {
   bottom: 0;
 }
 
-.paddingLeft {
+.paddingSideBar {
   padding-left: 3.68rem;
 }
 
@@ -164,6 +164,7 @@ body {
 
 .content-section {
   position: relative;
+  padding-right: 0.75rem;
 }
 
 .content-section .content-section-title {
@@ -177,7 +178,7 @@ body {
 .content-section-btn {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 0.75rem;
   font-size: 0.25rem;
   font-weight: normal;
   cursor: pointer;
