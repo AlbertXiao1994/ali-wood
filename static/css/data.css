@@ -40,16 +40,22 @@
 .video-list-wrapper {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  padding: 0.71rem 2.17rem 0.71rem 0.71rem;
+  justify-content: left;
+  padding: 0.18rem 2.17rem 0.71rem 0.71rem;
 }
 
 .video-list-wrapper .video-item {
   position: relative;
   width: 1.2rem;
   height: 1.2rem;
+  margin-TOP: 0.53rem;
+  margin-right: 0.4rem;
   cursor: pointer;
 }
+
+/* .video-list-wrapper .video-item:nth-child(8n) {
+  margin-right: 0;
+} */
 
 .nav-pagination {
   display: flex;

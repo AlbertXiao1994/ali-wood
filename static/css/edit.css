@@ -228,3 +228,101 @@
   height: 1.31rem;
   cursor: pointer;
 }
+
+.custom-param {
+  padding-top: 1.12rem;
+}
+
+.custom-param .params-wrapper {
+  width: 100%;
+  height: 2.96rem;
+  background: rgba(93, 93, 93, 0.7);
+  margin-top: 0.32rem;
+  margin-bottom: 0.32rem;
+  padding-top: 0.17rem;
+  padding-left: 0.32rem;
+}
+
+.param-item {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.param-item .param-item-title {
+  font-size: 0.25rem;
+  color: #fff;
+  margin-right: 0.1rem;
+}
+
+.param-item-selector .param-item-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 0.42rem;
+  height: 0.4rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.param-item-selector .option-bg {
+  width: 0.62rem;
+  margin-right: 0.13rem;
+}
+
+.scenery-group {
+  display: flex;
+  justify-content: left;
+  margin-top: 0.18rem;
+  margin-left: 0.7rem;
+}
+
+.scenery-group .scenery-item {
+  width: 0.62rem;
+  height: 0.4rem;
+  margin-right: 0.23rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.scenery-item-first {
+  background: #FACD52;
+}
+
+.scenery-item-second {
+  background: #FAD97D;
+}
+
+.scenery-item-third {
+  background: #FCEAB8;
+}
+
+.scenery-item-fourth {
+  background: #FDF2D2;
+}
+
+.scenery-item-fifth {
+  background: #FAF6EA;
+}
+
+.param-item-group {
+  display: flex;
+  justify-content: left;
+  margin-top: 0.32rem;
+}
+
+.param-item-selector {
+  margin-right: 0.63rem;
+}
+
+.param-item-selector .active {
+  background: #FACD52;
+}
+
+.upload-icon img {
+  width: 1.31rem;
+  height: 1.31rem;
+}
