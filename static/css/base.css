@@ -164,7 +164,7 @@ body {
 
 .content-section {
   position: relative;
-  padding-right: 0.75rem;
+  padding: 0 0.75rem;
 }
 
 .content-section .content-section-title {
