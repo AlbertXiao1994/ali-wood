@@ -129,15 +129,17 @@
 
 {% block scripts %}
 <script type="text/javascript">
-  // 加载dplayer
-  var dp = new DPlayer({
-    container: document.getElementById('dplayer'),
-    video: {
-      url: '/media/video/movie.ogg',
-      pic: 'demo.jpg',
-      thumbnails: 'thumbnails.jpg'
-    },
+  // 切换标签
+  $('.param-item-option').click(function () {
+    $(this).parent().children().each(function () {
+      $(this).removeClass('active');
+    });
+    $(this).parent().siblings().each(function () {
+      $(this).children().each(function () {
+        $(this).removeClass('active');
+      });
+    });
+    $(this).addClass('active');
   });
 </script>
-<script type="text/javascript" src="{% static 'js/player-shadow.js' %}"></script>
 {% endblock scripts %}
