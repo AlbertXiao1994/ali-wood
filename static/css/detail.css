@@ -1,0 +1,151 @@
+.player-tag-wrapper {
+  position: relative;
+  width: 16.7rem;
+  margin-top: 0.24rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0.48rem;
+  top: 0.55rem;
+  width: 0.54rem;
+  height: 0.54rem;
+  background: #FACD52;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.back-btn span {
+  font-size: 0.3rem;
+  color: #fff;
+}
+
+.video-player {
+  width: 10.48rem;
+  height: 5.75rem;
+}
+
+.video-tag-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6.08rem;
+  height: 5.75rem;
+  padding: 0 0.24rem;
+  background: #fff;
+}
+
+.param-curve-wrapper {
+  position: relative;
+  /* width: 16.7rem;
+  height: 3.43rem; */
+  width: 86.9%;
+  height: 31.7%;
+  margin-top: 0.3rem;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-tag-item {
+  margin-top: 0.29rem;
+}
+
+.video-tag-item .video-tag-title {
+  font-size: 0.28rem;
+  font-weight: bold;
+  margin-bottom: 0.13rem;
+}
+
+.video-tag-item .video-tag-group {
+  display: flex;
+  justify-content: left;
+}
+
+.video-tag-box {
+  min-width: 1.17rem;
+  height: 0.88rem;
+  max-width: 1.6rem;
+  margin-right: 0.22rem;
+  background: #FACD52;
+  border-radius: 0.1rem;
+}
+
+.video-tag-box .video-tag-subtitle {
+  font-size: 0.15rem;
+  font-weight: bold;
+}
+
+.video-tag-box .video-tag {
+  font-size: 0.2rem;
+}
+
+.curve-tags {
+  position: absolute;
+  top: 0.19rem;
+  left: 0.32rem;
+}
+
+.curve-tags .curve-tag-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 1.35rem;
+  height: 0.35rem;
+  margin-right: 0.2rem;
+  font-size: 0.18rem;
+  font-weight: bold;
+  border-radius: 0.05rem;
+  cursor: pointer;
+}
+
+.curve-tags .active {
+  background: #5D5D5D;
+  color: #fff;
+  pointer-events: none;
+}
+
+.curve-params-wrapper {
+  position: absolute;
+  top: 0.35rem;
+  right: 2rem;
+}
+
+.curve-params-wrapper .curve-params-title {
+  font-size: 0.28rem;
+  font-weight: bold;
+  margin-bottom: 0.36rem;
+}
+
+.curve-params-wrapper .curve-param-item {
+  display: flex;
+  align-items: center;
+  height: 0.5rem;
+}
+
+.curve-param-item .curve-param-subtitle {
+  width: 1.09rem;
+  font-size: 0.2rem;
+  font-weight: bold;
+}
+
+.curve-param-item .curve-param-detail {
+  width: 2rem;
+  font-size: 0.25rem;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  color: #fff;
+  background: #F1B06F;
+  text-align: center;
+}
+
+.stacked-area-chart {
+  position: absolute;
+  top: 0.68rem;
+  left: 0.2rem;
+  width: 59.6%;
+  height: 73.8%;
+}

@@ -1,0 +1,228 @@
+{% extends 'aliwood/layout/base.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/detail.css' %}" media="all">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.css">
+{% endblock style %}
+{% block js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.min.js"></script>
+{% endblock js %}
+
+{% block contents %}
+<div class="content dark full-screen">
+  <div class="back-btn flexCenter">
+    <a href="../data"><span class="glyphicon glyphicon-menu-left"></span></a>
+  </div>
+  <div class="player-tag-wrapper">
+    <div class="video-player" id="dplayer"></div>
+    <div class="video-tag-wrapper">
+      <div class="video-tag-item">
+        <div class="video-tag-title">产品标签</div>
+        <div class="video-tag-group">
+          <div class="video-tag-box flexCenter flexColumn">
+            <div class="video-tag-subtitle">产品类型</div>
+            <div class="video-tag">外套</div>
+          </div>
+          <div class="video-tag-box  flexCenter flexColumn">
+            <div class="video-tag-subtitle">拍摄场景</div>
+            <div class="video-tag">室内</div>
+          </div>
+          <div class="video-tag-box flexCenter flexColumn">
+            <div class="video-tag-subtitle">业务场景</div>
+            <div class="video-tag">产品上新</div>
+          </div>
+          <div class="video-tag-box flexCenter flexColumn">
+            <div class="video-tag-subtitle">性别</div>
+            <div class="video-tag">女</div>
+          </div>
+        </div>
+      </div>
+      <div class="video-tag-item">
+        <div class="video-tag-title">风格标签</div>
+        <div class="video-tag-group">
+          <div class="video-tag-box flexCenter flexColumn">
+            <div class="video-tag-subtitle">节奏风格</div>
+            <div class="video-tag">日常</div>
+          </div>
+          <div class="video-tag-box  flexCenter flexColumn">
+            <div class="video-tag-subtitle">视频风格</div>
+            <div class="video-tag">可爱</div>
+          </div>
+        </div>
+      </div>
+      <div class="video-tag-item">
+        <div class="video-tag-title">基础参数</div>
+        <div class="video-tag-group">
+          <div class="video-tag-box flexCenter flexColumn">
+            <div class="video-tag-subtitle">视频时长</div>
+            <div class="video-tag">15s</div>
+          </div>
+          <div class="video-tag-box  flexCenter flexColumn">
+            <div class="video-tag-subtitle">镜头数量</div>
+            <div class="video-tag">12</div>
+          </div>
+          <div class="video-tag-box flexCenter flexColumn">
+            <div class="video-tag-subtitle">平均镜头时长</div>
+            <div class="video-tag">1.5s</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="param-curve-wrapper">
+    <div class="curve-tags">
+      <div class="curve-tag-item active"><span>画面景别</span></div>
+      <div class="curve-tag-item"><span>画面运动强度</span></div>
+      <div class="curve-tag-item"><span>画面色调</span></div>
+      <div class="curve-tag-item"><span>主体位置</span></div>
+      <div class="curve-tag-item"><span>主体运动强度</span></div>
+      <div class="curve-tag-item"><span>主体情绪</span></div>
+      <div class="curve-tag-item"><span>整体</span></div>
+    </div>
+    <div class="stacked-area-chart" id="stacked-area-chart"></div>
+    <div class="curve-params-wrapper">
+      <div class="curve-params-title">画面景别</div>
+      <div class="curve-param-item">
+        <div class="curve-param-subtitle">首镜头</div>
+        <div class="curve-param-detail">中景</div>
+      </div>
+      <div class="curve-param-item">
+        <div class="curve-param-subtitle">整体变化</div>
+        <div class="curve-param-detail">大</div>
+      </div>
+      <div class="curve-param-item">
+        <div class="curve-param-subtitle">尾镜头</div>
+        <div class="curve-param-detail">近景</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock contents %}
+
+{% block scripts %}
+<script type="text/javascript">
+  // 加载dplayer
+  var dp = new DPlayer({
+    container: document.getElementById('dplayer'),
+    video: {
+      url: '/media/video/movie.ogg',
+      pic: 'demo.jpg',
+      thumbnails: 'thumbnails.jpg'
+    },
+  });
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('stacked-area-chart'));
+
+  var option = {
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'cross',
+        label: {
+          backgroundColor: '#6a7985'
+        }
+      }
+    },
+    legend: {
+      data: ['画面景别', '画面运动强度', '画面色调', '主体位置', '主体运动强度', '主体情绪']
+    },
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [{
+      type: 'category',
+      boundaryGap: false,
+      data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18',
+        '19', '20', '21', '22', '23', '24'
+      ]
+    }],
+    yAxis: [{
+      type: 'value'
+    }],
+    series: [{
+        name: '画面景别',
+        type: 'line',
+        stack: '总量',
+        areaStyle: {},
+        data: [120, 132, 101, 134, 90, 230, 210, 120, 132, 101, 134, 90, 230, 210, 120, 132, 101, 134, 90, 230, 210]
+      },
+      {
+        name: '画面运动强度',
+        type: 'line',
+        stack: '总量',
+        areaStyle: {},
+        data: [220, 182, 191, 234, 290, 330, 310, 220, 182, 191, 234, 290, 330, 310, 220, 182, 191, 234, 290, 330,
+          310, 290, 330, 310
+        ]
+      },
+      {
+        name: '画面色调',
+        type: 'line',
+        stack: '总量',
+        areaStyle: {},
+        data: [150, 232, 201, 154, 190, 330, 410, 150, 232, 201, 154, 190, 330, 410, 150, 232, 201, 154, 190, 330,
+          410, 190, 330, 410
+        ]
+      },
+      {
+        name: '主体位置',
+        type: 'line',
+        stack: '总量',
+        areaStyle: {
+          normal: {}
+        },
+        data: [320, 332, 301, 334, 390, 330, 320, 320, 332, 301, 334, 390, 330, 320, 320, 332, 301, 334, 390, 330,
+          320, 390, 330, 320
+        ]
+      },
+      {
+        name: '主体运动强度',
+        type: 'line',
+        stack: '总量',
+        label: {
+          normal: {
+            show: true,
+            position: 'top'
+          }
+        },
+        areaStyle: {
+          normal: {}
+        },
+        data: [820, 932, 901, 934, 1290, 1330, 1320, 820, 932, 901, 934, 1290, 1330, 1320, 820, 932, 901, 934, 1290,
+          1330, 1320, 1290, 1330, 1320
+        ]
+      },
+      {
+        name: '主体情绪',
+        type: 'line',
+        stack: '总量',
+        areaStyle: {
+          normal: {}
+        },
+        data: [320, 332, 301, 334, 390, 330, 320, 320, 332, 301, 334, 390, 330, 320, 320, 332, 301, 334, 390, 330,
+          320, 390, 330, 320
+        ]
+      },
+    ]
+  };
+
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+
+  // 切换标签
+  $('.curve-tag-item').click(function () {
+    $('.curve-tag-item').removeClass('active');
+    $(this).addClass('active');
+  });
+</script>
+{% endblock scripts %}

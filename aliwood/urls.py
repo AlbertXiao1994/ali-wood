@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^$', view.home, name='home'),
     url(r'^data/$', view.data, name='data'),
     url(r'^data/upload', view.upload, name='upload'),
+    url(r'^data/detail', view.detail, name='detail'),
     url(r'^edit/style_templat', view.styleTemplat, name='styleTemplat'),
     url(r'^edit/case_simulate/case', view.caseSimulateCases, name='caseSimulateCases'),
     url(r'^edit/case_simulate', view.caseSimulate, name='caseSimulate'),
