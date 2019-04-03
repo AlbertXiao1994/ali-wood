@@ -110,8 +110,9 @@
 
 .curve-params-wrapper {
   position: absolute;
-  top: 0.35rem;
-  right: 2rem;
+  top: 0.28rem;
+  right: 0.38rem;
+  width: 5.41rem;
 }
 
 .curve-params-wrapper .curve-params-title {
@@ -138,8 +139,31 @@
   font-weight: bold;
   border-radius: 0.2rem;
   color: #fff;
-  background: #F1B06F;
   text-align: center;
+}
+
+.param-bg-scene-type {
+  background: #F1B06F;
+}
+
+.param-bg-main-sport {
+  background: #B47F7F;
+}
+
+.param-bg-scene-sport {
+  background: #A1A1AC;
+}
+
+.param-bg-scene-color {
+  background: #6DA49E;
+}
+
+.param-bg-main-position {
+  background: #56719E;
+}
+
+.param-bg-main-mood {
+  background: #7B6A9A;
 }
 
 .stacked-area-chart {
@@ -148,4 +172,23 @@
   left: 0.2rem;
   width: 59.6%;
   height: 73.8%;
+}
+
+.detail-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.all-params .curve-param-detail {
+  width: 1.15rem;
+}
+
+.all-params .curve-param-subtitle {
+  width: 1.2rem;
+}
+
+.all-params .curve-param-item-group {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }

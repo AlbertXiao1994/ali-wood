@@ -65,6 +65,8 @@
 }
 
 .content-section .upload-icon {
+  position: relative;
+  display: inline-block;
   width: 1.31rem;
   height: 1.31rem;
 }
@@ -79,16 +81,6 @@
 
 .content .active {
   background: #FACD52;
-}
-
-.style-template .upload-icon img {
-  width: 1.31rem;
-  height: 1.31rem;
-}
-
-.case-simulate .upload-icon img {
-  width: 1.31rem;
-  height: 1.31rem;
 }
 
 .case-simulate .content-section-item {
@@ -223,12 +215,6 @@
   margin-bottom: 0.65rem;
 }
 
-.spec-effect-item .upload-icon img {
-  width: 1.31rem;
-  height: 1.31rem;
-  cursor: pointer;
-}
-
 .custom-param {
   padding-top: 1.12rem;
 }
@@ -322,7 +308,60 @@
   background: #FACD52;
 }
 
-.upload-icon img {
+.upload-icon > img {
   width: 1.31rem;
   height: 1.31rem;
+}
+
+.dropzone {
+  position: absolute;
+  top: 0.79rem;
+  left: 0.75rem;
+  min-height: 1.31rem;
+}
+
+.dropzone .dz-message {
+  position: relative;
+  left: 1.57rem;
+  top: 0.52rem;
+  font-size: 0.18rem;
+  margin: 0;
+}
+
+.dropzone .dz-preview {
+  position: relative;
+  margin: 0;
+  margin-left: 0.21rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  min-height: 1.2rem;
+}
+
+.dropzone >div:nth-child(2) {
+ margin-left: 1.52rem;
+}
+
+.dropzone .dz-preview .dz-image {
+  border-radius: 0 !important;
+  width: 100%;
+  height: 100%;
+}
+
+.dz-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.dropzone .dz-delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.dz-delete img {
+  width: 0.3rem;
+  height: 0.3rem;
+  vertical-align: top;
+  cursor: pointer !important;
 }
