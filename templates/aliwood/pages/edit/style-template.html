@@ -62,23 +62,25 @@
         清空
       </div>
     </div>
-    <div class="upload-icon">
-      <img src="{% static 'image/upload.png' %}">
-    </div>
-    <div class="dropzone" id="my-awesome-dropzone">
-      <p class="upload-describe dz-message">
-        点击“+”或拖拽文件到虚线框内来上传自己的案例
-      </p>
-    </div>
-    <div class="files" id="previews">
-      <div class="dz-preview dz-file-preview" id="tpl">
-        <div class="dz-image"><img data-dz-thumbnail></div>
-        <div class="dz-details">
-          <div class="dz-filename"><span data-dz-name></span></div>
-        </div>
-        <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
-        <div class="dz-delete">
-          <img class="" src="{% static 'image/close.png' %}" data-dz-remove />
+    <div class="content-section-item upload-material">
+      <div class="upload-icon">
+        <img src="{% static 'image/upload.png' %}">
+      </div>
+      <div class="dropzone" id="my-awesome-dropzone">
+        <p class="upload-describe dz-message">
+          点击“+”或拖拽文件到虚线框内来上传自己的案例
+        </p>
+      </div>
+      <div class="files" id="previews">
+        <div class="dz-preview dz-file-preview" id="tpl">
+          <div class="dz-image"><img data-dz-thumbnail></div>
+          <div class="dz-details">
+            <div class="dz-filename"><span data-dz-name></span></div>
+          </div>
+          <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
+          <div class="dz-delete">
+            <img class="" src="{% static 'image/close.png' %}" data-dz-remove />
+          </div>
         </div>
       </div>
     </div>

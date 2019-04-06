@@ -1,6 +1,8 @@
 {% extends 'aliwood/layout/with-sidebar-helper.html' %}
 {% block style %}
 {% load static %}
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css"
+  media="all">
 <link rel="stylesheet" type="text/css" href="{% static 'css/edit.css' %}" media="all">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.css">
 {% endblock style %}
@@ -14,13 +16,37 @@
   <div class="content-section">
     <div class="content-section-title">案例选择<span>Select Case</span></div>
     <div class="content-section-items">
-      <div class="content-section-item">
-        <form class="upload-icon dropzone" action="/file-upload" id="my-awesome-dropzone">
-          <img src="{% static 'image/upload.png' %}" class="dz-message">
-        </form>
+      <div class="content-section-item case-select">
+        <div class="upload-icon">
+          <img src="{% static 'image/upload.png' %}">
+        </div>
+        <div class="dropzone" id="case-dropzone">
+          <div class="upload-describe dz-message">
+            <p>点击“+”</p>
+            <p>或拖拽文件到虚线框内</p>
+            <p>来上传自己的案例</p>
+          </div>
+        </div>
+        <div class="files" id="previews">
+          <div class="dz-preview dz-file-preview" id="tpl">
+            <div class="dz-image"><img data-dz-thumbnail></div>
+            <div class="dz-details">
+              <div class="dz-filename"><span data-dz-name></span></div>
+            </div>
+            <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
+            <div class="dz-delete">
+              <img class="" src="{% static 'image/close.png' %}" data-dz-remove />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="content-section-item">
-        <a href="./case_simulate/case"><img src="{% static 'image/database.png' %}"></a>
+      <div class="content-section-item from-database">
+        <a href="./case_simulate/case/1"><img src="{% static 'image/database.png' %}"></a>
+        <div class="from-database-tip">
+          <p>点击图标</p>
+          <p>在数据库中</p>
+          <p>选择案例视频</p>
+        </div>
       </div>
     </div>
   </div>
@@ -32,14 +58,16 @@
         清空
       </div>
     </div>
-    <form class="upload-icon dropzone" action="/file-upload" id="my-awesome-dropzone">
-      <img src="{% static 'image/upload.png' %}" class="dz-message">
-    </form>
-    <!-- <div class="upload-describe">
-      <p>点击“+”</p>
-      <p>或拖拽文件到虚线框内</p>
-      <p>来上传自己的案例</p>
-    </div> -->
+    <div class="content-section-item upload-material">
+      <div class="upload-icon">
+        <img src="{% static 'image/upload.png' %}">
+      </div>
+      <div class="dropzone" id="material-dropzone">
+        <p class="upload-describe dz-message">
+          点击“+”或拖拽文件到虚线框内来上传自己的案例
+        </p>
+      </div>
+    </div>
   </div>
   <div class="content-btn upload-btn">
     <a href="./gen_video">开始剪辑</a>
@@ -76,6 +104,37 @@
 
 {% block scripts %}
 <script type="text/javascript">
+  // 初始化案例选择dropzone
+  var previewNode = document.querySelector("#tpl");
+  previewNode.id = "";
+  var previewTemplate = previewNode.parentNode.innerHTML;
+  previewNode.parentNode.removeChild(previewNode);
+  var caseDropzone = new Dropzone("#case-dropzone", {
+    url: "/video_upload",
+    previewTemplate: previewTemplate
+  });
+  caseDropzone.on("complete", function (file, data) {
+    $('.dz-image img').attr('src', '/static/image/video.jpg');
+    $('.from-database').css('display', 'none');
+    $('.case-select .dropzone').css('width', '1.31rem');
+  });
+  caseDropzone.on('removedfile', function () {
+    $('.from-database').css('display', 'block');
+  });
+
+  // 初始化素材上传dropzone
+  var materialDropzone = new Dropzone("#material-dropzone", {
+    url: "/video_upload",
+    previewTemplate: previewTemplate
+  });
+  materialDropzone.on("succsess", function (file, data) {
+    $('.dz-image img').attr('src', data.imageUrl);
+  });
+  // 清空所有素材
+  $('.content-section-btn').click(function () {
+    materialDropzone.removeAllFiles();
+  });
+
   // 加载dplayer
   var dp = new DPlayer({
     container: document.getElementById('dplayer'),
