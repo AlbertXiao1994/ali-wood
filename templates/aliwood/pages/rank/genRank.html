@@ -79,13 +79,13 @@
     previewTemplate: previewTemplate
   });
   myDropzone.on("complete", function (file, data) {
-    // params.randomCode = data.randomCode;
-    params.randomCode = '1234122';
     $('.dz-image img').attr('src', '/static/image/video.jpg');
     $(".upload-btn").toggleClass('active');
+    $('.upload-describe').css('display', 'none');
   });
   myDropzone.on('removedfile', function () {
     $(".upload-btn").toggleClass('active');
+    $('.upload-describe').css('display', 'block');
   });
 </script>
 {% endblock scripts %}
