@@ -15,77 +15,77 @@
     <div class="content-section-title">
       <div>参数选择<span>Select Parameters</span></div>
     </div>
-    <div class="content-section-btn">
+    <div class="content-section-btn repeat-btn">
       <span class="glyphicon glyphicon-repeat"></span>
       重置
     </div>
     <div class="params-wrapper">
       <div class="param-item">
         <div class="param-item-title" style="margin-right:0.2rem">景别</div>
-        <div class="param-item-selector" style="margin-right:0">
-          <div class="param-item-option select-box option-bg"></div>
-          <div class="param-item-option select-box option-bg"></div>
-          <div class="param-item-option select-box option-bg"></div>
-          <div class="param-item-option select-box option-bg"></div>
-          <div class="param-item-option select-box option-bg"></div>
-          <div class="param-item-option select-box option-bg"></div>
-          <div class="param-item-option select-box option-bg"></div>
-          <div class="param-item-option select-box option-bg"></div>
-          <div class="param-item-option select-box option-bg"></div>
-          <div class="param-item-option select-box option-bg"></div>
-          <div class="param-item-option select-box option-bg"></div>
+        <div class="param-item-selector scenery-type" style="margin-right:0">
+          <div class="param-item-option option-bg active"></div>
+          <div class="param-item-option option-bg"></div>
+          <div class="param-item-option option-bg"></div>
+          <div class="param-item-option option-bg"></div>
+          <div class="param-item-option option-bg"></div>
+          <div class="param-item-option option-bg"></div>
+          <div class="param-item-option option-bg"></div>
+          <div class="param-item-option option-bg"></div>
+          <div class="param-item-option option-bg"></div>
+          <div class="param-item-option option-bg"></div>
+          <div class="param-item-option option-bg"></div>
         </div>
       </div>
       <div class="scenery-group">
-        <div class="scenery-item scenery-item-first">远景</div>
-        <div class="scenery-item scenery-item-second">全景</div>
-        <div class="scenery-item scenery-item-third">中景</div>
-        <div class="scenery-item scenery-item-fourth">近景</div>
-        <div class="scenery-item scenery-item-fifth">特写</div>
+        <div class="scenery-item marginRight23 scenery-item-first" timeLine="0">远景</div>
+        <div class="scenery-item marginRight23 scenery-item-second" timeLine="1">全景</div>
+        <div class="scenery-item marginRight23 scenery-item-third" timeLine="2">中景</div>
+        <div class="scenery-item marginRight23 scenery-item-fourth" timeLine="3">近景</div>
+        <div class="scenery-item marginRight23 scenery-item-fifth" timeLine="4">特写</div>
       </div>
       <div class="param-item-group">
         <div class="param-item">
           <div class="param-item-title">主体运动变化</div>
-          <div class="param-item-selector">
-            <div class="param-item-option active">大</div>
-            <div class="param-item-option">小</div>
+          <div class="param-item-selector" id="mainMotionArg">
+            <div class="param-item-option active" mainMotionArg="0">大</div>
+            <div class="param-item-option" mainMotionArg="1">小</div>
           </div>
         </div>
         <div class="param-item">
           <div class="param-item-title">主体位置变化</div>
-          <div class="param-item-selector">
-            <div class="param-item-option active">大</div>
-            <div class="param-item-option">小</div>
+          <div class="param-item-selector" id="positionArg">
+            <div class="param-item-option active" positionArg="0">大</div>
+            <div class="param-item-option" positionArg="1">小</div>
           </div>
         </div>
         <div class="param-item">
           <div class="param-item-title">镜头切换节奏</div>
-          <div class="param-item-selector">
-            <div class="param-item-option active">快</div>
-            <div class="param-item-option">慢</div>
+          <div class="param-item-selector" id="shotSizeArg">
+            <div class="param-item-option active" shotSizeArg="0">快</div>
+            <div class="param-item-option" shotSizeArg="1">慢</div>
           </div>
         </div>
       </div>
       <div class="param-item-group">
         <div class="param-item">
           <div class="param-item-title">镜头运动变化</div>
-          <div class="param-item-selector">
-            <div class="param-item-option active">大</div>
-            <div class="param-item-option">小</div>
+          <div class="param-item-selector" id="picMotionArg">
+            <div class="param-item-option active" picMotionArg="0">大</div>
+            <div class="param-item-option" picMotionArg="1">小</div>
           </div>
         </div>
         <div class="param-item">
           <div class="param-item-title">画面色调变化</div>
-          <div class="param-item-selector">
-            <div class="param-item-option active">大</div>
-            <div class="param-item-option">小</div>
+          <div class="param-item-selector" id="colorArg">
+            <div class="param-item-option active" colorArg="0">大</div>
+            <div class="param-item-option" colorArg="1">小</div>
           </div>
         </div>
         <div class="param-item">
           <div class="param-item-title">主体情绪</div>
-          <div class="param-item-selector">
-            <div class="param-item-option active">正</div>
-            <div class="param-item-option">负</div>
+          <div class="param-item-selector" id="emotionArg">
+            <div class="param-item-option active" emotionArg="0">正</div>
+            <div class="param-item-option" emotionArg="1">负</div>
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
   </div>
   <div class="content-section">
     <div class="content-section-title">
-      <div>素材上传<span>Upload Files</div></span>
+      <div>素材上传<span>Upload Files</span></div>
       <div class="content-section-btn remove-all">
         <span class="glyphicon glyphicon-trash"></span>
         清空
@@ -122,8 +122,8 @@
       </div>
     </div>
   </div>
-  <div class="content-btn upload-btn active">
-    <a href="./gen_video">开始剪辑</a>
+  <div class="content-btn upload-btn">
+    开始剪辑
   </div>
 </div>
 {% endblock contents %}
@@ -144,22 +144,57 @@
 
 {% block scripts %}
 <script type="text/javascript">
+  // 景别宿主元素
+  var hostElt = $('.scenery-type .param-item-option:first');
+  // 素材数量
+  var numMaterial = 0;
+  // 自定义参数
+  var customParams = {
+    timeLine: [],
+    shotSizeArg: 0,
+    mainMotionArg: 0,
+    positionArg: 0,
+    picMotionArg: 0,
+    colorArg: 0,
+    emotionArg: 0
+  };
+
   // 配置dropzone
+  var params = {
+      info: []
+  };
   var previewNode = document.querySelector("#tpl");
   previewNode.id = "";
   var previewTemplate = previewNode.parentNode.innerHTML;
   previewNode.parentNode.removeChild(previewNode);
   var myDropzone = new Dropzone("#my-awesome-dropzone", {
-    url: "/video_upload",
+    url: "/data/video_upload?randomCode={{ randomCode }}",
     previewTemplate: previewTemplate
   });
   myDropzone.on("success", function (file, data) {
-    $('.dz-image img').attr('src', data.imageUrl);
+    params.info.push({code: data.randomCode, uid: data.uid});
+    file.uid = data.uid;
+    $('.dz-image img').last().attr('src', data.imageUrl);
+    if (numMaterial++ === 0 && customParams.timeLine.length) {
+        $('.upload-btn').addClass('active');
+    };
   });
-  myDropzone.on('removedfile', function () {});
+  myDropzone.on('removedfile', function (file) {
+      var idx = params.info.findIndex(function(item, idx) {
+          return item.uid === file.uid;
+      });
+      var item = params.info[idx];
+      $.post('/data/video_delete', {randomCode: item.code, uid:item.uid});
+      params.info.splice(idx, 1);
+      if (numMaterial-- === 1) {
+          $('.upload-btn').removeClass('active');
+      };
+  });
   // 清空所有素材
-  $('.remove-all').click(function () {
+  $('.content-section-btn').click(function () {
     myDropzone.removeAllFiles();
+    $('.upload-btn').removeClass('active');
+    numMaterial = 0;
   });
 
   // 切换标签
@@ -167,12 +202,51 @@
     $(this).parent().children().each(function () {
       $(this).removeClass('active');
     });
-    $(this).parent().siblings().each(function () {
-      $(this).children().each(function () {
-        $(this).removeClass('active');
-      });
-    });
     $(this).addClass('active');
+    var argName = $(this).parent().attr('id');
+    customParams[argName] = parseInt($(this).attr(argName));
+  });
+
+  // 选择景别
+  $('.scenery-item').click(function () {
+    if (hostElt) {
+      var clone = $(this).clone();
+      clone.removeClass('marginRight23');
+      hostElt.empty();
+      hostElt.append(clone);
+      var id = clone.attr('id');
+      customParams.timeLine.push(parseInt(id));
+      hostElt.removeClass('active');
+      // 更新hostElt
+      hostElt = hostElt.next();
+      if (hostElt) {
+        hostElt.addClass('active');
+      }
+    }
+    if (numMaterial > 0 && customParams.timeLine.length) {
+        $('.upload-btn').addClass('active');
+    };
+  });
+
+  // 开始剪辑
+  $('.upload-btn').click(function() {
+    // TODO:确定入参的key
+    $.get('paramGenVideo', {context: params}, function(data) {
+      window.open('gen_video?videoId=' + data.videoId, '_self');
+    });
+  });
+
+  // 重置
+  $('.repeat-btn').click(function() {
+    $('.scenery-type').children('.param-item-option').empty();
+    $('.param-item-option').removeClass('active');
+    $('.param-item-group .param-item-selector').find('.param-item-option:first').addClass('active');
+    customParams.timeLine = [];
+    for (var k in customParams) {
+      if (typeof params[k] === 'number') {
+        params[k] = 0;
+      }
+    }
   });
 </script>
 {% endblock scripts %}

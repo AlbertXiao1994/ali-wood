@@ -13,7 +13,7 @@
 
 {% block contents %}
 <div class="content dark full-screen paddingSideBar case-simulate">
-  <div class="content-section">
+  <div class="content-section select-case">
     <div class="content-section-title">案例选择<span>Select Case</span></div>
     <div class="content-section-items">
       <div class="content-section-item case-select">
@@ -41,13 +41,19 @@
         </div>
       </div>
       <div class="content-section-item from-database">
-        <a href="./case_simulate/case/1"><img src="{% static 'image/database.png' %}"></a>
+        <a href="./case_simulate/case"><img src="{% static 'image/database.png' %}"></a>
         <div class="from-database-tip">
           <p>点击图标</p>
           <p>在数据库中</p>
           <p>选择案例视频</p>
         </div>
       </div>
+         <div class="from-data-result">
+              <img class="from-data-result-thumbnail" src="{% static 'image/database.png' %}">
+              <div class="from-data-result-delete">
+                <img src="{% static 'image/close.png' %}" />
+            </div>
+          </div>
     </div>
   </div>
   <div class="content-section">
@@ -70,7 +76,7 @@
     </div>
   </div>
   <div class="content-btn upload-btn">
-    <a href="./gen_video">开始剪辑</a>
+    开始剪辑
   </div>
   <div class="player-shadow flexColumn">
     <div class="player-shadow-close" id="player-btn-close">
@@ -104,45 +110,93 @@
 
 {% block scripts %}
 <script type="text/javascript">
+  // 素材数量
+  var numMaterial = 0;
+  // 案例视频id
+  var videoId;
+  // 含有uid时初始化
+  var uid = location.search.substring(5);
   // 初始化案例选择dropzone
+  var params = {
+      info: []
+  };
   var previewNode = document.querySelector("#tpl");
   previewNode.id = "";
   var previewTemplate = previewNode.parentNode.innerHTML;
   previewNode.parentNode.removeChild(previewNode);
   var caseDropzone = new Dropzone("#case-dropzone", {
-    url: "/video_upload",
+    url: "/data/video_upload?randomCode={{ randomCode }}",
     previewTemplate: previewTemplate
   });
-  caseDropzone.on("complete", function (file, data) {
-    $('.dz-image img').attr('src', '/static/image/video.jpg');
+  caseDropzone.on("success", function (file, data) {
+    params.info.push({code: data.randomCode, uid: data.uid});
+    file.uid = data.uid;
+    videoId = data.uid;
+    $('.dz-image img').last().attr('src', data.imageUrl);
     $('.from-database').css('display', 'none');
     $('.case-select .dropzone').css('width', '1.31rem');
+    if (numMaterial++ === 0 && (uid || videoId)) {
+        $('.upload-btn').addClass('active');
+    };
   });
   caseDropzone.on('removedfile', function () {
     $('.from-database').css('display', 'block');
+    var idx = params.info.findIndex(function(item, idx) {
+          return item.uid === file.uid;
+      });
+      var item = params.info[idx];
+      $.post('/data/video_delete', {randomCode: item.code, uid:item.uid});
+      params.info.splice(idx, 1);
   });
 
   // 初始化素材上传dropzone
   var materialDropzone = new Dropzone("#material-dropzone", {
-    url: "/video_upload",
+    url: "/data/video_upload?randomCode={{ randomCode }}",
     previewTemplate: previewTemplate
   });
   materialDropzone.on("succsess", function (file, data) {
+    params.randomCode = data.randomCode;
+    params.uid = data.uid;
     $('.dz-image img').attr('src', data.imageUrl);
+    if (numMaterial++ === 0) {
+        $('.upload-btn').addClass('active');
+    };
+  });
+  materialDropzone.on('removedfile', function () {
+    $(".upload-btn").toggleClass('active');
+    $.post('/data/video_delete', {randomCode: params.randomCode,uid:params.uid});
+    if (numMaterial-- === 1) {
+          $('.upload-btn').removeClass('active');
+      };
   });
   // 清空所有素材
   $('.content-section-btn').click(function () {
     materialDropzone.removeAllFiles();
+    $('.upload-btn').removeClass('active');
+    numMaterial = 0;
   });
 
-  // 加载dplayer
-  var dp = new DPlayer({
-    container: document.getElementById('dplayer'),
-    video: {
-      url: '/media/video/movie.ogg',
-      pic: 'demo.jpg',
-      thumbnails: 'thumbnails.jpg'
-    },
+  $('.upload-btn').click(function() {
+    $.get('', {styleId: styleId});
+  });
+
+  if (uid) {
+    $('.select-case .content-section-item').css('display', 'none');
+    $('.from-data-result-delete img').attr('src', 'url');
+    $('.from-data-result-delete').click(function() {
+      $('.select-case .content-section-item').css('display', 'block');
+      $('.from-data-result').css('display', 'none');
+     });
+  } else {
+    $('.from-data-result').css('display', 'none');
+  }
+
+  // 开始剪辑
+  $('.upload-btn').click(function() {
+    // TODO: 返回视频id
+    $.get('', {uid: videoId || uid || ''}, function(data) {
+      window.open('gen_video?videoId=' + data.videoId, '_self');
+    });
   });
 </script>
 <script type="text/javascript" src="{% static 'js/player-shadow.js' %}"></script>

@@ -73,64 +73,77 @@
         <div class="upload-params-item" id="targetClientId">
           <div class="upload-params-item-title">性别</div>
           <div class="upload-params-item-body clearfix">
-            <div class="upload-param active" id="male">男</div>
-            <div class="upload-param">女</div>
-            <div class="upload-param">儿童</div>
-            <div class="upload-param">男女通用</div>
+            {% for targetClient in targetClients %}
+                {% ifequal forloop.counter0 0%}
+                    <div class="upload-param active" id="{{ targetClient.id }}">{{ targetClient.name }}</div>
+                {% else %}
+                    <div class="upload-param" id="{{ targetClient.id }}">{{ targetClient.name }}</div>
+                {% endifequal %}
+            {% endfor %}
           </div>
         </div>
         <div class="upload-params-item" id="productCategoryId">
           <div class="upload-params-item-title">产品类型</div>
           <div class="upload-params-item-body clearfix">
-            <div class="upload-param active" id="sy">上衣</div>
-            <div class="upload-param">外套</div>
-            <div class="upload-param">毛衣</div>
-            <div class="upload-param">衬衫</div>
-            <div class="upload-param">短裙</div>
-            <div class="upload-param">内衣</div>
-            <div class="upload-param">长裤</div>
-            <div class="upload-param">短裤</div>
-            <div class="upload-param">卫衣</div>
-            <div class="upload-param">T恤</div>
-            <div class="upload-param">连衣裙</div>
-            <div class="upload-param">长裙</div>
-            <div class="upload-param">墨镜</div>
-            <div class="upload-param">包</div>
-            <div class="upload-param">鞋</div>
-            <div class="upload-param">其他</div>
+              {% for product_category in product_categories %}
+                  {% ifequal forloop.counter0 0%}
+                    <div class="upload-param active" id="{{ product_category.id }}">{{ product_category.name}}</div>
+                {% else %}
+                    <div class="upload-param" id="{{ product_category.id }}">{{ product_category.name}}</div>
+                {% endifequal %}
+              {% endfor %}
           </div>
         </div>
         <div class="upload-params-item" id="cameraSceneId">
           <div class="upload-params-item-title">拍摄场景</div>
           <div class="upload-params-item-body clearfix">
-            <div class="upload-param active" id="sn">室内</div>
-            <div class="upload-param">室外</div>
+            {% for cameraScene in cameraScenes %}
+                {% ifequal forloop.counter0 0%}
+                    <div class="upload-param active" id="{{ cameraScene.id }}">{{ cameraScene.name }}</div>
+                {% else %}
+                    <div class="upload-param" id="{{ cameraScene.id }}">{{ cameraScene.name }}</div>
+                {% endifequal %}
+
+            {% endfor %}
           </div>
         </div>
         <div class="upload-params-item" id="serviceSceneId">
           <div class="upload-params-item-title">业务场景</div>
           <div class="upload-params-item-body clearfix">
-            <div class="upload-param active" id="sx">产品上新</div>
-            <div class="upload-param">品牌宣传</div>
+            {% for serviceScene in serviceScenes %}
+                {% ifequal forloop.counter0 0%}
+                    <div class="upload-param active" id="{{ serviceScene.id }}">{{ serviceScene.name }}</div>
+                {% else %}
+                    <div class="upload-param" id="{{ serviceScene.id }}">{{ serviceScene.name }}</div>
+                {% endifequal %}
+
+            {% endfor %}
           </div>
         </div>
         <div class="upload-params-item" id="tempoStyleId">
           <div class="upload-params-item-title">节奏风格</div>
           <div class="upload-params-item-body clearfix">
-            <div class="upload-param active" id="dg">动感</div>
-            <div class="upload-param">变奏</div>
-            <div class="upload-param">日常</div>
-            <div class="upload-param">平缓</div>
+            {% for tempoStyle in tempoStyles %}
+                {% ifequal forloop.counter0 0%}
+                    <div class="upload-param active" id="{{ tempoStyle.id }}">{{ tempoStyle.name }}</div>
+                {% else %}
+                    <div class="upload-param" id="{{ tempoStyle.id }}">{{ tempoStyle.name }}</div>
+                {% endifequal %}
+
+            {% endfor %}
           </div>
         </div>
         <div class="upload-params-item" id="pictureStyleId">
           <div class="upload-params-item-title">画面风格</div>
           <div class="upload-params-item-body clearfix">
-            <div class="upload-param active" id="ss">时尚</div>
-            <div class="upload-param">优雅</div>
-            <div class="upload-param">可爱</div>
-            <div class="upload-param">自然</div>
-            <div class="upload-param">性感</div>
+            {% for pictureStyle in pictureStyles %}
+                {% ifequal forloop.counter0 0%}
+                    <div class="upload-param active" id="{{ pictureStyle.id }}">{{ pictureStyle.name }}</div>
+                {% else %}
+                    <div class="upload-param" id="{{ pictureStyle.id }}">{{ pictureStyle.name }}</div>
+                {% endifequal %}
+
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -164,17 +177,19 @@
   var previewTemplate = previewNode.parentNode.innerHTML;
   previewNode.parentNode.removeChild(previewNode);
   var myDropzone = new Dropzone("#my-awesome-dropzone", {
-    url: "/file/post",
-    previewTemplate: previewTemplate
+    url: "/data/video_upload?randomCode={{ randomCode }}",
+    previewTemplate: previewTemplate,
+
   });
-  myDropzone.on("complete", function (file, data) {
-    // params.randomCode = data.randomCode;
-    params.randomCode = '1234122';
-    $('.dz-image img').attr('src', '/static/image/video.jpg');
+  myDropzone.on("success", function (file, data) {
+    params.randomCode = data.randomCode;
+    params.uid = data.uid;
+    $('.dz-image img').attr('src', data.imageUrl);
     $(".upload-btn").toggleClass('active');
   });
   myDropzone.on('removedfile', function () {
     $(".upload-btn").toggleClass('active');
+    $.post('/data/video_delete', {randomCode: params.randomCode,uid:params.uid});
   });
 
   // 分析视频
@@ -183,9 +198,9 @@
     $('.spinner-border').css('display', 'inline-block');
     ['targetClientId', 'productCategoryId', 'cameraSceneId', 'serviceSceneId ',
     'tempoStyleId', 'pictureStyleId '].map(function(key) {
-      params[key] = $('#' + key).children('.upload-params-item-body').children('.active').attr('id');
+        params[key] = $('#' + key).children('.upload-params-item-body').children('.active').attr('id');
     });
-    $.post("./video_analyse", params);
+    $.post("/data/video_analysis", params);
   });
 </script>
 {% endblock scripts %}

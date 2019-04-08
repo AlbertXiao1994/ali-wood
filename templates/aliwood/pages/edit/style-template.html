@@ -13,98 +13,99 @@
 
 {% block contents %}
 <div class="content dark full-screen paddingSideBar style-template">
-  <div class="content-section">
+
+    <div class="content-section">
     <div class="content-section-title">风格选择<span>Template</span></div>
     <div class="content-section-items">
-      <div class="video-item">
-        <div class="video-item-thumbnail">
-          <img src="{% static 'image/video.jpg' %}">
-          <div class="video-item-icon">
-            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-          </div>
-        </div>
-        <div class="video-item-describe">动感</div>
-      </div>
-      <div class="video-item">
-        <div class="video-item-icon">
-          <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-        </div>
-        <div class="video-item-thumbnail">
-          <img src="{% static 'image/video.jpg' %}">
-        </div>
-        <div class="video-item-describe">变奏</div>
-      </div>
-      <div class="video-item">
-        <div class="video-item-icon">
-          <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-        </div>
-        <div class="video-item-thumbnail">
-          <img src="{% static 'image/video.jpg' %}">
-        </div>
-        <div class="video-item-describe">日常</div>
-      </div>
-      <div class="video-item">
-        <div class="video-item-icon">
-          <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-        </div>
-        <div class="video-item-thumbnail">
-          <img src="{% static 'image/video.jpg' %}">
-        </div>
-        <div class="video-item-describe">舒缓</div>
+    <div class="video-item active" title="动感" describe="动感风格的镜头剪切节奏较快，时长变化较大。镜头切换时遵循前后画面的视觉连贯性。">
+    <div class="video-item-thumbnail">
+      <img src="{% static 'image/video.jpg' %}">
+      <div class="video-item-icon">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
       </div>
     </div>
-  </div>
-  <div class="content-section">
+    <div class="video-item-describe">动感</div>
+    </div>
+    <div class="video-item" title="变奏" describe="1动感风格的镜头剪切节奏较快，时长变化较大。镜头切换时遵循前后画面的视觉连贯性。" src="/media/video/movie.ogg">
+    <div class="video-item-icon">
+      <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+    </div>
+    <div class="video-item-thumbnail">
+      <img src="{% static 'image/video.jpg' %}">
+    </div>
+    <div class="video-item-describe">变奏</div>
+    </div>
+    <div class="video-item" title="日常" describe="2动感风格的镜头剪切节奏较快，时长变化较大。镜头切换时遵循前后画面的视觉连贯性。">
+    <div class="video-item-icon">
+      <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+    </div>
+    <div class="video-item-thumbnail">
+      <img src="{% static 'image/video.jpg' %}">
+    </div>
+    <div class="video-item-describe">日常</div>
+    </div>
+    <div class="video-item" title="舒缓" describe="3动感风格的镜头剪切节奏较快，时长变化较大。镜头切换时遵循前后画面的视觉连贯性。">
+    <div class="video-item-icon">
+      <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+    </div>
+    <div class="video-item-thumbnail">
+      <img src="{% static 'image/video.jpg' %}">
+    </div>
+    <div class="video-item-describe">舒缓</div>
+    </div>
+    </div>
+    </div>
+    <div class="content-section">
     <div class="content-section-title">
-      <div>素材上传<span>Upload Files</div></span>
-      <div class="content-section-btn">
-        <span class="glyphicon glyphicon-trash"></span>
-        清空
-      </div>
+    <div>素材上传<span>Upload Files</span></div>
+    <div class="content-section-btn">
+    <span class="glyphicon glyphicon-trash"></span>
+    清空
+    </div>
     </div>
     <div class="content-section-item upload-material">
-      <div class="upload-icon">
-        <img src="{% static 'image/upload.png' %}">
+    <div class="upload-icon">
+    <img src="{% static 'image/upload.png' %}">
+    </div>
+    <div class="dropzone" id="my-awesome-dropzone">
+    <p class="upload-describe dz-message">
+      点击“+”或拖拽文件到虚线框内来上传自己的案例
+    </p>
+    </div>
+    <div class="files" id="previews">
+    <div class="dz-preview dz-file-preview" id="tpl">
+      <div class="dz-image"><img data-dz-thumbnail></div>
+      <div class="dz-details">
+        <div class="dz-filename"><span data-dz-name></span></div>
       </div>
-      <div class="dropzone" id="my-awesome-dropzone">
-        <p class="upload-describe dz-message">
-          点击“+”或拖拽文件到虚线框内来上传自己的案例
-        </p>
+      <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
+      <div class="dz-delete">
+        <img class="" src="{% static 'image/close.png' %}" data-dz-remove />
       </div>
-      <div class="files" id="previews">
-        <div class="dz-preview dz-file-preview" id="tpl">
-          <div class="dz-image"><img data-dz-thumbnail></div>
-          <div class="dz-details">
-            <div class="dz-filename"><span data-dz-name></span></div>
-          </div>
-          <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
-          <div class="dz-delete">
-            <img class="" src="{% static 'image/close.png' %}" data-dz-remove />
-          </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="content-btn upload-btn">
+      开始剪辑
+    </div>
+
+    <div class="player-shadow flexColumn">
+        <div class="player-shadow-close" id="player-btn-close">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
         </div>
-      </div>
+        <div class="video-title"></div>
+        <div class="shadow-player-wrapper flexCenter">
+            <div class="shadow-player-btn"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></div>
+            <div class="shadow-player" id="dplayer"></div>
+            <div class="shadow-player-btn"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></div>
+        </div>
+        <div class="video-describe">
+        </div>
+        <div class="select-btn active">
+            <a href="#">使用这个风格</a>
+        </div>
     </div>
-  </div>
-  <div class="content-btn upload-btn active">
-    <a href="./gen_video">开始剪辑</a>
-  </div>
-  <div class="player-shadow flexColumn">
-    <div class="player-shadow-close" id="player-btn-close">
-      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-    </div>
-    <div class="video-title">动感</div>
-    <div class="shadow-player-wrapper flexCenter">
-      <div class="shadow-player-btn"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></div>
-      <div class="shadow-player" id="dplayer"></div>
-      <div class="shadow-player-btn"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></div>
-    </div>
-    <div class="video-describe">
-      动感风格的镜头剪切节奏较快，时长变化较大。镜头切换时遵循前后画面的视觉连贯性。
-    </div>
-    <div class="select-btn active">
-      <a href="#">使用这个风格</a>
-    </div>
-  </div>
 </div>
 {% endblock contents %}
 
@@ -124,32 +125,64 @@
 
 {% block scripts %}
 <script type="text/javascript">
+  // 风格id，默认选中第一个
+  var styleId = '1';
+  // 素材数量
+  var numMaterial = 0;
   // 配置dropzone
+  var params = {
+      info: []
+  };
   var previewNode = document.querySelector("#tpl");
   previewNode.id = "";
   var previewTemplate = previewNode.parentNode.innerHTML;
   previewNode.parentNode.removeChild(previewNode);
   var myDropzone = new Dropzone("#my-awesome-dropzone", {
-    url: "/video_upload",
+    url: "/data/video_upload?randomCode={{ randomCode }}",
     previewTemplate: previewTemplate
   });
   myDropzone.on("success", function (file, data) {
-    $('.dz-image img').attr('src', data.imageUrl);
+    params.info.push({code: data.randomCode, uid: data.uid});
+    file.uid = data.uid;
+    $('.dz-image img').last().attr('src', data.imageUrl);
+    if (numMaterial++ === 0) {
+        $('.upload-btn').addClass('active');
+    };
   });
-  myDropzone.on('removedfile', function () {});
+  myDropzone.on('removedfile', function (file) {
+      var idx = params.info.findIndex(function(item, idx) {
+          return item.uid === file.uid;
+      });
+      var item = params.info[idx];
+      $.post('/data/video_delete', {randomCode: item.code, uid:item.uid});
+      params.info.splice(idx, 1);
+      if (numMaterial-- === 1) {
+          $('.upload-btn').removeClass('active');
+      };
+  });
   // 清空所有素材
   $('.content-section-btn').click(function () {
     myDropzone.removeAllFiles();
+    $('.upload-btn').removeClass('active');
+    numMaterial = 0;
   });
 
-  // 加载dplayer
-  var dp = new DPlayer({
-    container: document.getElementById('dplayer'),
-    video: {
-      url: '/media/video/movie.ogg',
-      pic: 'demo.jpg',
-      thumbnails: 'thumbnails.jpg'
-    },
+  $('.video-item').click(function () {
+    var title = $(this).attr('title');
+    var describe = $(this).attr('describe');
+    $('.video-title').empty();
+    $('.video-title').append(title);
+    $('.video-describe').empty();
+    $('.video-describe').append(describe);
+    styleId = $(this).attr('id');
+  });
+
+  // 开始剪辑
+  $('.upload-btn').click(function() {
+    // TODO: 返回视频id
+    $.get('', {styleId: styleId}, function(data) {
+      window.open('gen_video?videoId=' + data.videoId, '_self');
+    });
   });
 </script>
 <script type="text/javascript" src="{% static 'js/player-shadow.js' %}"></script>
