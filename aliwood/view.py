@@ -17,8 +17,7 @@ def upload(request):
   return render(request, 'aliwood/pages/data/upload.html', context)
 
 def detail(request):
-  context          = {}
-  context['path'] = request.path
+  context = {}
   return render(request, 'aliwood/pages/data/detail.html', context)
 
 def styleTemplat(request):

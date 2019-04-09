@@ -63,8 +63,8 @@ body {
 
 .nav-link a {
   font-size: 0.25rem;
-  color: #5D5D5D;
   text-decoration: none;
+  color: #5D5D5D;
 }
 
 .nav-link a:hover {
@@ -77,7 +77,7 @@ body {
   background: #5D5D5D;
 }
 
-.nav-link .active {
+.navbar-nav > div.active a {
   color: #FACD52;
 }
 

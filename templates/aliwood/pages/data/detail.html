@@ -11,89 +11,120 @@
 
 {% block contents %}
 <div class="content dark full-screen">
-  <div class="back-btn flexCenter">
-    <a href="../data"><span class="glyphicon glyphicon-menu-left"></span></a>
-  </div>
-  <div class="player-tag-wrapper">
-    <div class="video-player" id="dplayer"></div>
-    <div class="video-tag-wrapper">
-      <div class="video-tag-item">
-        <div class="video-tag-title">产品标签</div>
-        <div class="video-tag-group">
-          <div class="video-tag-box flexCenter flexColumn">
-            <div class="video-tag-subtitle">产品类型</div>
-            <div class="video-tag">外套</div>
-          </div>
-          <div class="video-tag-box  flexCenter flexColumn">
-            <div class="video-tag-subtitle">拍摄场景</div>
-            <div class="video-tag">室内</div>
-          </div>
-          <div class="video-tag-box flexCenter flexColumn">
-            <div class="video-tag-subtitle">业务场景</div>
-            <div class="video-tag">产品上新</div>
-          </div>
-          <div class="video-tag-box flexCenter flexColumn">
-            <div class="video-tag-subtitle">性别</div>
-            <div class="video-tag">女</div>
-          </div>
-        </div>
-      </div>
-      <div class="video-tag-item">
-        <div class="video-tag-title">风格标签</div>
-        <div class="video-tag-group">
-          <div class="video-tag-box flexCenter flexColumn">
-            <div class="video-tag-subtitle">节奏风格</div>
-            <div class="video-tag">日常</div>
-          </div>
-          <div class="video-tag-box  flexCenter flexColumn">
-            <div class="video-tag-subtitle">视频风格</div>
-            <div class="video-tag">可爱</div>
+  <div class="detail-wrapper">
+    <div class="back-btn flexCenter">
+      <a href="../data" class="flexCenter"><span class="glyphicon glyphicon-menu-left"></span></a>
+    </div>
+    <div class="player-tag-wrapper">
+      <div class="video-player" id="dplayer"></div>
+      <div class="video-tag-wrapper">
+        <div class="video-tag-item">
+          <div class="video-tag-title">产品标签</div>
+          <div class="video-tag-group">
+            <div class="video-tag-box flexCenter flexColumn">
+              <div class="video-tag-subtitle">产品类型</div>
+              <div class="video-tag">外套</div>
+            </div>
+            <div class="video-tag-box  flexCenter flexColumn">
+              <div class="video-tag-subtitle">拍摄场景</div>
+              <div class="video-tag">室内</div>
+            </div>
+            <div class="video-tag-box flexCenter flexColumn">
+              <div class="video-tag-subtitle">业务场景</div>
+              <div class="video-tag">产品上新</div>
+            </div>
+            <div class="video-tag-box flexCenter flexColumn">
+              <div class="video-tag-subtitle">性别</div>
+              <div class="video-tag">女</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="video-tag-item">
-        <div class="video-tag-title">基础参数</div>
-        <div class="video-tag-group">
-          <div class="video-tag-box flexCenter flexColumn">
-            <div class="video-tag-subtitle">视频时长</div>
-            <div class="video-tag">15s</div>
+        <div class="video-tag-item">
+          <div class="video-tag-title">风格标签</div>
+          <div class="video-tag-group">
+            <div class="video-tag-box flexCenter flexColumn">
+              <div class="video-tag-subtitle">节奏风格</div>
+              <div class="video-tag">日常</div>
+            </div>
+            <div class="video-tag-box  flexCenter flexColumn">
+              <div class="video-tag-subtitle">视频风格</div>
+              <div class="video-tag">可爱</div>
+            </div>
           </div>
-          <div class="video-tag-box  flexCenter flexColumn">
-            <div class="video-tag-subtitle">镜头数量</div>
-            <div class="video-tag">12</div>
-          </div>
-          <div class="video-tag-box flexCenter flexColumn">
-            <div class="video-tag-subtitle">平均镜头时长</div>
-            <div class="video-tag">1.5s</div>
+        </div>
+        <div class="video-tag-item">
+          <div class="video-tag-title">基础参数</div>
+          <div class="video-tag-group">
+            <div class="video-tag-box flexCenter flexColumn">
+              <div class="video-tag-subtitle">视频时长</div>
+              <div class="video-tag">15s</div>
+            </div>
+            <div class="video-tag-box  flexCenter flexColumn">
+              <div class="video-tag-subtitle">镜头数量</div>
+              <div class="video-tag">12</div>
+            </div>
+            <div class="video-tag-box flexCenter flexColumn">
+              <div class="video-tag-subtitle">平均镜头时长</div>
+              <div class="video-tag">1.5s</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="param-curve-wrapper">
-    <div class="curve-tags">
-      <div class="curve-tag-item active"><span>画面景别</span></div>
-      <div class="curve-tag-item"><span>画面运动强度</span></div>
-      <div class="curve-tag-item"><span>画面色调</span></div>
-      <div class="curve-tag-item"><span>主体位置</span></div>
-      <div class="curve-tag-item"><span>主体运动强度</span></div>
-      <div class="curve-tag-item"><span>主体情绪</span></div>
-      <div class="curve-tag-item"><span>整体</span></div>
-    </div>
-    <div class="stacked-area-chart" id="stacked-area-chart"></div>
-    <div class="curve-params-wrapper">
-      <div class="curve-params-title">画面景别</div>
-      <div class="curve-param-item">
-        <div class="curve-param-subtitle">首镜头</div>
-        <div class="curve-param-detail">中景</div>
+    <div class="param-curve-wrapper">
+      <div class="curve-tags">
+        <div class="curve-tag-item active"><span>画面景别</span></div>
+        <div class="curve-tag-item"><span>画面运动强度</span></div>
+        <div class="curve-tag-item"><span>画面色调</span></div>
+        <div class="curve-tag-item"><span>主体位置</span></div>
+        <div class="curve-tag-item"><span>主体运动强度</span></div>
+        <div class="curve-tag-item"><span>主体情绪</span></div>
+        <div class="curve-tag-item"><span>整体</span></div>
       </div>
-      <div class="curve-param-item">
-        <div class="curve-param-subtitle">整体变化</div>
-        <div class="curve-param-detail">大</div>
-      </div>
-      <div class="curve-param-item">
-        <div class="curve-param-subtitle">尾镜头</div>
-        <div class="curve-param-detail">近景</div>
+      <div class="stacked-area-chart" id="stacked-area-chart"></div>
+      <!-- <div class="curve-params-wrapper">
+        <div class="curve-params-title">画面景别</div>
+        <div class="curve-param-item">
+          <div class="curve-param-subtitle">首镜头</div>
+          <div class="curve-param-detail">中景</div>
+        </div>
+        <div class="curve-param-item">
+          <div class="curve-param-subtitle">整体变化</div>
+          <div class="curve-param-detail">大</div>
+        </div>
+        <div class="curve-param-item">
+          <div class="curve-param-subtitle">尾镜头</div>
+          <div class="curve-param-detail">近景</div>
+        </div>
+      </div> -->
+      <div class="curve-params-wrapper all-params">
+        <div class="curve-params-title">视频整体变化特征</div>
+        <div class="curve-param-item-group">
+          <div class="curve-param-item">
+            <div class="curve-param-subtitle">画面景别变化</div>
+            <div class="curve-param-detail param-bg-scene-type">大</div>
+          </div>
+          <div class="curve-param-item">
+            <div class="curve-param-subtitle">主体位置变化</div>
+            <div class="curve-param-detail param-bg-main-position">小</div>
+          </div>
+          <div class="curve-param-item">
+            <div class="curve-param-subtitle">画面运动变化</div>
+            <div class="curve-param-detail param-bg-scene-sport">小</div>
+          </div>
+          <div class="curve-param-item">
+            <div class="curve-param-subtitle">主体位置变化</div>
+            <div class="curve-param-detail param-bg-scene-sport">大</div>
+          </div>
+          <div class="curve-param-item">
+            <div class="curve-param-subtitle">画面色调变化</div>
+            <div class="curve-param-detail param-bg-scene-color">小</div>
+          </div>
+          <div class="curve-param-item">
+            <div class="curve-param-subtitle">主体情绪变化</div>
+            <div class="curve-param-detail param-bg-main-mood">大</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -102,18 +133,70 @@
 
 {% block scripts %}
 <script type="text/javascript">
+  var context = {
+	  video_Url:'',
+	  gender: '女',
+    product_category: '外套',
+    cameraScene: '室内',
+    serviceScene: '产品上新',
+    tempoStyle: '日常',
+    pictureStyle: '可爱',
+    video_time:15,
+    cram_num:12,
+    clip_arvTime:1.5,
+    shotSize:{
+      'shotsizeData': '[{"xAxis": 6, "yAxis": 0}, {"xAxis": 6, "yAxis": 3}, {"xAxis": 12, "yAxis": 0}, {"xAxis": 12, "yAxis": 3}, {"xAxis": 18, "yAxis": 0}, {"xAxis": 18, "yAxis": 3}]',
+      'firstShot':'中景',
+      'total':'大',
+      'endShot':'近景',
+   },
+    picMotion:{
+   		'picMotionData': '[{"xAxis": 6, "yAxis": 0}, {"xAxis": 6, "yAxis": 3}, {"xAxis": 12, "yAxis": 0}, {"xAxis": 12, "yAxis": 3}, {"xAxis": 18, "yAxis": 0}, {"xAxis": 18, "yAxis": 3}]', 
+   		'firstShot':'中景',
+   		'total':'大',
+   		'endShot':'近景',
+   },
+    color:{
+   		'colorData': '[{"xAxis": 6, "yAxis": 0}, {"xAxis": 6, "yAxis": 3}, {"xAxis": 12, "yAxis": 0}, {"xAxis": 12, "yAxis": 3}, {"xAxis": 18, "yAxis": 0}, {"xAxis": 18, "yAxis": 3}]', 
+   		'firstShot':'中景',
+   		'total':'大',
+   		'endShot':'近景',
+   },
+    position:{
+   		'positionData': '[{"xAxis": 6, "yAxis": 0}, {"xAxis": 6, "yAxis": 3}, {"xAxis": 12, "yAxis": 0}, {"xAxis": 12, "yAxis": 3}, {"xAxis": 18, "yAxis": 0}, {"xAxis": 18, "yAxis": 3}]', 
+   		'firstShot':'中景',
+   		'total':'大',
+   		'endShot':'近景',
+   },
+    mainMotion:{
+   		'mainMotionData': '{"xAxis": 6, "yAxis": 0}, {"xAxis": 6, "yAxis": 3}, {"xAxis": 12, "yAxis": 0}, {"xAxis": 12, "yAxis": 3}, {"xAxis": 18, "yAxis": 0}, {"xAxis": 18, "yAxis": 3}]', 
+   		'firstShot':'中景',
+   		'total':'大',
+   		'endShot':'近景',
+   },
+    emotion:{
+   		'emotion': '[{"xAxis": 6, "yAxis": 0}, {"xAxis": 6, "yAxis": 3}, {"xAxis": 12, "yAxis": 0}, {"xAxis": 12, "yAxis": 3}, {"xAxis": 18, "yAxis": 0}, {"xAxis": 18, "yAxis": 3}]', 
+   		'firstShot':'中景',
+   		'total':'大',
+   		'endShot':'近景',
+   },
+    totalArg:{
+   		shotSizeArg:'大',
+   		picMotionArg:'大',
+   		colorArg:'大',
+   		positionArg:'大',
+   		mainMotionArg:'大',
+   		emotionArg:'大',
+   }
+  };
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('stacked-area-chart'));
+
   // 加载dplayer
   var dp = new DPlayer({
     container: document.getElementById('dplayer'),
-    video: {
-      url: '/media/video/movie.ogg',
-      pic: 'demo.jpg',
-      thumbnails: 'thumbnails.jpg'
-    },
+    video: {url: context.video_Url}
   });
-
-  // 基于准备好的dom，初始化echarts实例
-  var myChart = echarts.init(document.getElementById('stacked-area-chart'));
 
   var option = {
     tooltip: {
@@ -127,11 +210,6 @@
     },
     legend: {
       data: ['画面景别', '画面运动强度', '画面色调', '主体位置', '主体运动强度', '主体情绪']
-    },
-    toolbox: {
-      feature: {
-        saveAsImage: {}
-      }
     },
     grid: {
       left: '3%',
