@@ -483,4 +483,5 @@
 
 .scenery-type .param-item-option {
   cursor: default;
+  pointer-events: none;
 }

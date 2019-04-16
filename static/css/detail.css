@@ -1,3 +1,8 @@
+.detail.content {
+  /* overflow: auto; */
+  padding-bottom: 0.24rem;
+}
+
 .player-tag-wrapper {
   position: relative;
   width: 16.7rem;
@@ -95,7 +100,7 @@
   float: left;
   width: 1.35rem;
   height: 0.35rem;
-  margin-right: 0.2rem;
+  /* margin-right: 0.2rem; */
   font-size: 0.18rem;
   font-weight: bold;
   border-radius: 0.05rem;
@@ -140,30 +145,7 @@
   border-radius: 0.2rem;
   color: #fff;
   text-align: center;
-}
-
-.param-bg-scene-type {
   background: #F1B06F;
-}
-
-.param-bg-main-sport {
-  background: #B47F7F;
-}
-
-.param-bg-scene-sport {
-  background: #A1A1AC;
-}
-
-.param-bg-scene-color {
-  background: #6DA49E;
-}
-
-.param-bg-main-position {
-  background: #56719E;
-}
-
-.param-bg-main-mood {
-  background: #7B6A9A;
 }
 
 .stacked-area-chart {
@@ -179,6 +161,10 @@
   height: 100%;
 }
 
+.all-params {
+  display: none;
+}
+
 .all-params .curve-param-detail {
   width: 1.15rem;
 }
@@ -192,3 +178,4 @@
   flex-flow: row wrap;
   justify-content: space-around;
 }
+

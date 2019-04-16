@@ -142,17 +142,17 @@
 <script type="text/javascript">
   var filter = {};
   // 切换标签
-  $('.filter-item').click(function () {
-    $(this).parent().children().each(function () {
-      $(this).removeClass('active');
-    });
-    $(this).parent().siblings().each(function () {
-      $(this).children().each(function () {
-        $(this).removeClass('active');
-      });
-    });
-    $(this).addClass('active');
-  });
+  // $('.filter-item').click(function () {
+  //   $(this).parent().children().each(function () {
+  //     $(this).removeClass('active');
+  //   });
+  //   $(this).parent().siblings().each(function () {
+  //     $(this).children().each(function () {
+  //       $(this).removeClass('active');
+  //     });
+  //   });
+  //   $(this).addClass('active');
+  // });
 
   // 初始化过滤器
   initFilter();

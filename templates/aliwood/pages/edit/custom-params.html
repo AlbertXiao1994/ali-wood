@@ -149,7 +149,7 @@
   // 素材数量
   var numMaterial = 0;
   // 自定义参数
-  var customParams = {
+  var INITIAL_CUSTOM_PARAMS = {
     timeLine: [],
     shotSizeArg: 0,
     mainMotionArg: 0,
@@ -158,6 +158,7 @@
     colorArg: 0,
     emotionArg: 0
   };
+  var customParams = INITIAL_CUSTOM_PARAMS;
 
   // 配置dropzone
   var params = {
@@ -241,12 +242,9 @@
     $('.scenery-type').children('.param-item-option').empty();
     $('.param-item-option').removeClass('active');
     $('.param-item-group .param-item-selector').find('.param-item-option:first').addClass('active');
-    customParams.timeLine = [];
-    for (var k in customParams) {
-      if (typeof params[k] === 'number') {
-        params[k] = 0;
-      }
-    }
+    customParams = INITIAL_CUSTOM_PARAMS;
+    hostElt = $('.scenery-type .param-item-option:first');
+    hostElt.addClass('active');
   });
 </script>
 {% endblock scripts %}
