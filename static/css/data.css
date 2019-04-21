@@ -93,3 +93,11 @@
   margin-top: 0.48rem;
   background: #FACD52;
 }
+
+.wrapper {
+  overflow: hidden !important;
+}
+
+.content {
+  overflow: hidden !important;
+}

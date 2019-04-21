@@ -2,19 +2,20 @@
 {% block style %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/history.css' %}" media="all">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.css">
 {% endblock style %}
+{% block js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.js"></script>
+{% endblock js %}
 
 {% block contents %}
-<div class="content dark full-screen flexBox padding83">
+<div class="content dark full-screen padding83 history">
   <div class="content-section">
     <div class="content-section-title">历史剪辑</div>
     <div class="content-section-main">
       <div class="history-item">
         <img src="{% static 'image/history.png' %}" class="history-img-top" alt="...">
         <div class="item-shadow">
-          <div class="item-shadow-delete">
-            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-          </div>
           <div class="item-shadow-status">
             <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
           </div>
@@ -26,7 +27,7 @@
           <div class="history-item-text history-item-time">2019/03/12 17:30:00</div>
         </div>
       </div>
-      <div class="history-item">
+      <div class="history-item video-item">
         <img src="{% static 'image/history.png' %}" class="history-img-top" alt="...">
         <div class="item-shadow">
           <div class="item-shadow-delete">
@@ -46,9 +47,6 @@
       <div class="history-item">
         <img src="{% static 'image/history.png' %}" class="history-img-top" alt="...">
         <div class="item-shadow">
-          <div class="item-shadow-delete">
-            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-          </div>
           <div class="item-shadow-status">
             <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
           </div>
@@ -60,7 +58,7 @@
           <div class="history-item-text history-item-time">2019/03/12 17:30:00</div>
         </div>
       </div>
-      <div class="history-item">
+      <div class="history-item video-item">
         <img src="{% static 'image/history.png' %}" class="history-img-top" alt="...">
         <div class="item-shadow">
           <div class="item-shadow-delete">
@@ -77,7 +75,7 @@
           <div class="history-item-text history-item-time">2019/03/12 17:30:00</div>
         </div>
       </div>
-      <div class="history-item">
+      <div class="history-item video-item">
         <img src="{% static 'image/history.png' %}" class="history-img-top" alt="...">
         <div class="item-shadow">
           <div class="item-shadow-delete">
@@ -96,9 +94,23 @@
       </div>
     </div>
   </div>
+  <div class="player-shadow flexColumn">
+    <div class="player-shadow-close" id="player-btn-close">
+      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    </div>
+    <div class="shadow-player-wrapper flexCenter">
+      <div class="shadow-player" id="dplayer"></div>
+    </div>
+  </div>
 </div>
 {% endblock contents %}
 
 {% block scripts %}
+<script>
+  $('.item-shadow-delete').click(function(e) {
+    e.stopPropagation();
+    $(this).parent().parent().remove();
+  });
+</script>
 <script type="text/javascript" src="{% static 'js/player-shadow.js' %}"></script>
 {% endblock scripts %}
